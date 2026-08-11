@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<!-- ==============================================================
+ RECOMMENDATION VARIABLES  (single source of truth; edit here, then grep views)
+ thesis           : Own the empty center - a modern, beverage-led, prescriptive full back office for mid-market multi-outlet hospitality.
+ entry_motion     : Warm-first. Thought leadership (create) + LinkedIn retargeting (qualify) live day one.
+ recommended      : The Full Motion  (anchors to Growth, from $4,500/mo management)
+ starting_motions : C1 C2 C3 C4 create | C5 C6 C7 capture | C8 C9(ABM) linkedin | C11 C12 C13 connect | C21 compound
+ google_role      : open capture + brand defense + conquest, feeds LinkedIn retargeting. Craftable runs zero paid search today.
+ channel_order    : warm retargeting + Google capture (parallel, day 1) -> LinkedIn ABM -> cold personas (Scale) -> Meta/programmatic (Scale); content throughout; activate on signal
+ crm              : HubSpot (say HubSpot, not the generic term)
+============================================================== -->
+
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Craftable | Competitive White Space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Brand v3 core */
+  --navy:#001122; --court:#002245; --card:#0D2744; --card-2:#00172E;
+  --lime:#C6FF3D; --blue:#0099D1; --blue-soft:#5BB8E0; --teal:#00C4B3; --teal-dark:#009D8F;
+  --orange:#F4A261; --rust:#FF5A1F; --yellow:#FFD166;
+  --bone:#F4F1EA; --chalk:#E8E4DA; --muted:#93A4BE;
+  --disp:'Anton',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace; --serif:'Fraunces',serif;
+
+  /* Theme-following (dark default) */
+  --bg:var(--navy); --surface:var(--court); --panel:var(--card); --ink:var(--bone); --sub:var(--chalk);
+  --line:rgba(190,214,246,0.16); --line-soft:rgba(190,214,246,0.09);
+  /* Accent-as-text tokens (dark values) */
+  --lime-text:#C6FF3D; --blue-text:#5BB8E0; --teal-text:#00C4B3; --rust-text:#F4A261; --yellow-text:#FFD166;
+  /* subtle fills that flip by theme */
+  --tint:rgba(255,255,255,.05); --tint-2:rgba(255,255,255,.03);
+  /* SVG bar fills (theme-independent, legible on both card backgrounds) */
+  --bar-hi:#FF5A1F; --bar-mid:#F4A261; --bar-lo:#5BB8E0; --open-fill:rgba(198,255,61,.10);
+}
+[data-theme="light"]{
+  --bg:#F4F1EA; --surface:#FFFFFF; --panel:#FFFFFF; --ink:#001122; --sub:#26364d; --muted:#5a6b82;
+  --line:rgba(0,17,34,.14); --line-soft:rgba(0,17,34,.08);
+  --lime-text:#4d6b00; --blue-text:#0077A8; --teal-text:#007a70; --rust-text:#b8461a; --yellow-text:#8a6200;
+  --tint:rgba(0,17,34,.045); --tint-2:rgba(0,17,34,.025);
+  --open-fill:rgba(122,150,0,.12);
+}
+/* Pinned dark panels: text pinned to literal light values regardless of theme */
+.dark-panel{ --ink:#F4F1EA; --sub:rgba(216,212,200,.9); --muted:rgba(216,212,200,.72);
+  --lime-text:#C6FF3D; --blue-text:#5BB8E0; --teal-text:#00C4B3; --rust-text:#F4A261; --yellow-text:#FFD166;
+  --line:rgba(190,214,246,0.18); --tint:rgba(255,255,255,.06); }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{margin:0;line-height:1.12}
+p{margin:0 0 12px}
+a{color:var(--blue-text);text-decoration:none}
+
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:14px;height:58px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.brand b{color:var(--ink);font-weight:600}
+.spacer{margin-left:auto}
+.themebtn{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--tint);border:1px solid var(--line);color:var(--sub);border-radius:999px;
+  padding:8px 14px;cursor:pointer;transition:all .18s}
+.themebtn:hover{border-color:var(--lime);color:var(--lime-text)}
+
+/* Hero (pinned dark panel) */
+.hero{background:linear-gradient(160deg,#00172E 0%,#001122 62%,#00223f 130%);
+  border-bottom:1px solid rgba(190,214,246,.14)}
+.hero .wrap{padding:56px 22px 48px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime-text);margin-bottom:18px}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(34px,6vw,62px);letter-spacing:.005em;color:var(--ink);text-transform:uppercase}
+.hero h1 .accent{color:var(--lime-text)}
+.hero .thesis{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.4vw,25px);
+  color:var(--sub);margin-top:22px;max-width:820px;line-height:1.4}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:7px 13px;color:var(--sub);background:var(--tint)}
+
+/* Sections */
+.view{display:none;padding:8px 0 40px}
+.view.active{display:block}
+.sec{padding:40px 0 8px}
+.secnum{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--lime-text);text-transform:uppercase}
+.sec h2{font-family:var(--disp);font-weight:400;font-size:clamp(24px,3.6vw,38px);text-transform:uppercase;margin:8px 0 6px;letter-spacing:.01em}
+.lede{color:var(--sub);max-width:820px;font-size:17px;margin-bottom:8px}
+
+/* Cards */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 22px;margin:16px 0;
+  box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.card.tl{border-left:4px solid var(--lime)}
+.card.tb{border-left:4px solid var(--blue)}
+.card.tt{border-left:4px solid var(--teal)}
+.card.to{border-left:4px solid var(--orange)}
+.card.tr{border-left:4px solid var(--rust)}
+.card h3{font-family:var(--body);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.card .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.why{background:var(--tint);border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px;margin-top:14px;font-size:15px;color:var(--sub)}
+.why b{color:var(--ink)}
+
+/* badges */
+.badge{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid transparent}
+.b-hi{background:rgba(198,255,61,.16);color:var(--lime-text);border-color:rgba(198,255,61,.4)}
+.b-md{background:rgba(0,196,179,.16);color:var(--teal-text);border-color:rgba(0,196,179,.4)}
+[data-theme="light"] .b-hi{background:rgba(122,150,0,.14)}
+[data-theme="light"] .b-md{background:rgba(0,122,112,.13)}
+.b-lo{background:rgba(147,164,190,.16);color:var(--muted);border-color:rgba(147,164,190,.35)}
+[data-theme="light"] .b-lo{background:rgba(120,135,160,.14)}
+.chanhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.chanlabel{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.chanhead h3{margin:0;font-size:18px}
+.chantags{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto}
+.video{margin:20px 0}
+.videowrap{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.videowrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.pgrid{overflow-x:auto;margin:6px 0}
+.pmatrix{width:100%;border-collapse:separate;border-spacing:0;min-width:760px}
+.pmatrix td,.pmatrix th{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line-soft);font-size:14px;text-align:left;color:var(--sub)}
+.pmatrix .rowlab{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);width:20%;font-weight:600}
+.pmatrix tr.sechead td{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--tint);font-weight:700}
+.pcolhead{border-bottom:2px solid var(--line)}
+.pname{font-family:var(--display);font-size:17px;color:var(--ink);line-height:1.1}
+.pprice{font-family:var(--mono);font-size:15px;color:var(--ink);font-weight:700;margin-top:6px}
+.pper{font-size:11.5px;color:var(--muted)}
+.pspend{font-size:11.5px;color:var(--sub);margin-top:5px}
+.ppinned{background:#071A38;border-top:3px solid var(--lime);border-radius:10px 10px 0 0}
+.ppinned .pname,.ppinned .pprice{color:#F4F1EA}
+.ppinned .pper{color:rgba(216,212,200,.75)}
+.ppinned .pspend{color:rgba(216,212,200,.85)}
+.pmatrix td.rec{background:rgba(122,150,0,.09)}
+[data-theme="dark"] .pmatrix td.rec{background:rgba(198,255,61,.07)}
+.ppill{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--lime);color:#071A38;padding:3px 8px;border-radius:6px;font-weight:700;margin-bottom:8px}
+.chk{color:#3f6a1c;font-weight:700}
+[data-theme="dark"] .chk{color:#7BAA3E}
+.crs{color:var(--muted)}
+.prt{color:var(--rust-text);font-weight:600}
+.qual{color:var(--sub);font-size:13px}
+.freebar{margin-top:14px;border:1px solid var(--line-soft);border-left:4px solid var(--lime);border-radius:10px;padding:14px 16px;background:var(--tint);font-size:14.5px;color:var(--sub)}
+.freebar b{color:var(--ink)}
+.nav{display:flex;gap:3px;flex-wrap:wrap}
+.navtab{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;padding:8px 11px;border-radius:8px;color:var(--muted);cursor:pointer;border:1px solid transparent;background:none;white-space:nowrap}
+.navtab:hover{color:var(--ink);border-color:var(--line)}
+.navtab.active{color:var(--ink);background:var(--tint);border-color:var(--line)}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.stat{border:1px solid var(--line-soft);border-radius:12px;padding:16px;background:var(--tint)}
+.stat .n{font-family:var(--display);font-size:24px;color:var(--ink);line-height:1.05}
+.stat .l{font-size:12.5px;color:var(--sub);margin-top:8px}
+.stat.b{border-left:4px solid var(--blue)}.stat.t{border-left:4px solid var(--teal)}.stat.l4{border-left:4px solid var(--lime)}.stat.o{border-left:4px solid var(--orange)}
+.move{cursor:pointer;transition:border-color .15s,transform .15s}
+.move:hover{border-color:var(--lime);transform:translateY(-2px)}
+.movenum{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted)}
+.movelink{font-family:var(--mono);font-size:11px;color:var(--lime-text);margin-top:12px;display:block}
+.metastrip{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:11px;color:var(--muted)}
+.metastrip b{color:var(--sub)}
+.clusterhead{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:24px 0 10px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.clusterhead .cc{width:12px;height:12px;border-radius:3px;display:inline-block}
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.mgrid .card{padding:15px}
+.mtop{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+.mlabel{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--muted)}
+.owner{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 6px;margin-left:auto}
+.b-start{background:rgba(198,255,61,.16);color:var(--lime-text);border-color:rgba(198,255,61,.4)}
+.b-build{background:rgba(0,153,209,.16);color:var(--blue-text);border-color:rgba(0,153,209,.4)}
+.b-later{background:rgba(147,164,190,.16);color:var(--muted);border-color:rgba(147,164,190,.35)}
+[data-theme="light"] .b-start{background:rgba(122,150,0,.14)}
+[data-theme="light"] .b-build{background:rgba(0,119,168,.12)}
+[data-theme="light"] .b-later{background:rgba(120,135,160,.14)}
+@media(max-width:720px){.mgrid{grid-template-columns:1fr}.statrow{grid-template-columns:repeat(2,1fr)}}
+
+/* gap card header row */
+.gaphead{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.gaphead h3{flex:1;min-width:220px}
+.gap-fields{margin-top:12px}
+.gap-fields .row{padding:9px 0;border-top:1px solid var(--line-soft)}
+.gap-fields .row:first-child{border-top:0}
+.gap-fields .lab{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:6px;padding:4px 8px;color:var(--muted);background:var(--tint-2)}
+
+/* toggle (progressive disclosure) */
+details.disc{margin-top:14px;border-top:1px solid var(--line-soft);padding-top:12px}
+details.disc>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);
+  background:var(--tint);border:1px solid var(--line);border-radius:999px;padding:8px 14px;transition:all .16s;user-select:none}
+details.disc>summary::-webkit-details-marker{display:none}
+details.disc>summary:hover{border-color:var(--blue);color:var(--blue-text)}
+details.disc>summary .chipmark{font-weight:700;color:var(--lime-text);font-size:13px;line-height:1}
+details.disc[open]>summary .verb{display:none}
+details.disc[open]>summary{border-color:var(--blue);color:var(--blue-text)}
+.disc-body{margin-top:14px}
+
+/* field/detail table inside competitor cards */
+.ftable{width:100%;border-collapse:collapse;font-size:14.5px}
+.ftable th,.ftable td{text-align:left;vertical-align:top;padding:9px 12px;border-top:1px solid var(--line-soft)}
+.ftable th{width:34%;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ftable td{color:var(--sub)}
+
+/* matrix + hooks tables */
+.tblwrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px}
+table.grid{width:100%;min-width:640px;border-collapse:collapse;font-size:14px}
+table.grid th,table.grid td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table.grid thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--tint);border-bottom:1px solid var(--line)}
+table.grid tbody tr:last-child td{border-bottom:0}
+table.grid td.dim,table.grid th.dim{font-weight:700;color:var(--ink)}
+.mono-sm{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.na{color:var(--lime-text);font-weight:600}
+
+/* two-col */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+/* figures */
+figure{margin:18px 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 14px}
+.figtitle{font-family:var(--body);font-weight:800;font-size:16px;margin-bottom:2px}
+.figsub{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.figscroll{overflow-x:auto}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line-soft);padding-top:10px;line-height:1.5}
+@media(max-width:700px){.figscroll svg{min-width:600px}}
+
+/* UVP statement (pinned dark) */
+.uvp{background:linear-gradient(150deg,#00223f,#00172E);border:1px solid rgba(198,255,61,.35);
+  border-radius:16px;padding:26px 26px;margin:16px 0}
+.uvp .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime-text);margin-bottom:10px}
+.uvp p{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,26px);line-height:1.4;color:var(--ink);margin:0}
+
+.list{margin:6px 0 0;padding:0;list-style:none}
+.list li{position:relative;padding:8px 0 8px 22px;border-top:1px solid var(--line-soft);color:var(--sub)}
+.list li:first-child{border-top:0}
+.list li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:2px;background:var(--lime)}
+.list.dial li::before{background:var(--rust)}
+.list b{color:var(--ink)}
+
+.footer{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--muted);font-size:12.5px}
+.footer .wrap{max-width:1080px}
+
+/* camp + landscape */
+.b-rest{background:rgba(0,153,209,.16);color:var(--blue-text);border-color:rgba(0,153,209,.4)}
+.b-hotel{background:rgba(244,162,97,.18);color:var(--rust-text);border-color:rgba(244,162,97,.5)}
+.b-bev{background:rgba(0,196,179,.16);color:var(--teal-text);border-color:rgba(0,196,179,.4)}
+.b-own{background:rgba(198,255,61,.18);color:var(--lime-text);border-color:rgba(198,255,61,.5)}
+[data-theme="light"] .b-rest{background:rgba(0,119,168,.12)}
+[data-theme="light"] .b-hotel{background:rgba(184,70,26,.12)}
+[data-theme="light"] .b-bev{background:rgba(0,122,112,.12)}
+[data-theme="light"] .b-own{background:rgba(122,150,0,.14)}
+.camp{margin:14px 0}
+.camp .players{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 12px}
+.camp .players .tag{color:var(--sub)}
+.center-callout{background:linear-gradient(150deg,#00223f,#00172E);border:1px solid rgba(198,255,61,.4);border-radius:16px;padding:22px 24px;margin:18px 0}
+.center-callout .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime-text);margin-bottom:8px}
+.center-callout p{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.3vw,22px);line-height:1.42;color:var(--ink);margin:0}
+.mentions{font-size:14.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+.mentions b{color:var(--sub)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:2px 0 4px}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.legend i{width:12px;height:12px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.lentry .k{margin-bottom:2px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style id="roomcss">.topbar .wrap{height:auto;min-height:58px;padding:9px 0;flex-wrap:wrap}.nav{overflow-x:auto;max-width:100%}@media(max-width:860px){.nav{order:3;flex-basis:100%;padding-top:4px}}</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span class="brand"><b>Impactable</b> &nbsp;/&nbsp; Craftable</span>
+  <span class="spacer"></span>
+  <nav class="nav" aria-label="Room sections">
+    <button class="navtab active" data-view="overview">Overview</button>
+    <button class="navtab" data-view="whitespace">White Space</button>
+    <button class="navtab" data-view="targeting">Targeting</button>
+    <button class="navtab" data-view="ecosystem">Ecosystem</button>
+    <button class="navtab" data-view="howitworks">How It Works</button>
+    <button class="navtab" data-view="paths">Paths Forward</button>
+  </nav>
+  <button class="themebtn" id="themebtn" aria-label="Toggle light and dark theme">Light mode</button>
+</div></div>
+<main class="wrap">
+<section class="view active" id="overview">
+  <div class="sec" style="margin-top:26px">
+    <div class="secnum">Craftable Intelligence Room</div>
+    <h2 style="font-size:clamp(26px,4.5vw,42px)">Own the empty center the category left open.</h2>
+    <p class="lede">The hospitality back-office field splits three ways and nobody sits in the middle: a modern, beverage-led, prescriptive back office for multi-outlet operators. Craftable does. This room maps that open lane, the buyers who feel it, and the one connected motion that takes it, activating the audience and content Craftable already has, then adding the capture and account motion the category leaves wide open.</p>
+  </div>
+
+  <figure style="margin:20px 0 4px">
+    <div class="figtitle">Three camps, one empty center</div>
+    <div class="figsub">The category, mapped &middot; horizontal: reach across hospitality &middot; vertical: beverage-led vs food and procurement</div>
+    <div class="figscroll"><svg viewBox="0 0 680 330" role="img" aria-label="A two-by-two map. Restaurant platforms sit lower left, hotel procurement suites lower right, beverage point tools upper left. The upper-right quadrant, full hospitality reach and beverage-led, is highlighted and empty except for Craftable." style="width:100%;height:auto;min-width:560px">
+      <style>
+        .ovaxis{stroke:var(--line);stroke-width:1.5}
+        .ovbox{fill:var(--line-soft);stroke:var(--line);stroke-width:1;rx:12}
+        .ovname{fill:var(--ink);font-family:var(--body);font-weight:800;font-size:14px}
+        .ovsub{fill:var(--muted);font-family:var(--mono);font-size:10.5px;letter-spacing:.03em}
+        .ovax{fill:var(--muted);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+        .ovopen{fill:var(--lime-text);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+      </style>
+      <line class="ovaxis" x1="340" y1="34" x2="340" y2="292"/>
+      <line class="ovaxis" x1="46" y1="163" x2="634" y2="163"/>
+      <text class="ovax" x="340" y="20" text-anchor="middle">Beverage-led</text>
+      <text class="ovax" x="340" y="312" text-anchor="middle">Food &amp; procurement-led</text>
+      <text class="ovax" x="52" y="167" >Narrow reach</text>
+      <text class="ovax" x="628" y="167" text-anchor="end">Full hospitality reach</text>
+      <rect x="66" y="52" width="250" height="94" rx="12" class="ovbox"/>
+      <text class="ovname" x="80" y="88">Beverage point tools</text>
+      <text class="ovsub" x="80" y="108">WISK &middot; BevSpot &middot; Backbar</text>
+      <rect x="66" y="180" width="250" height="94" rx="12" class="ovbox"/>
+      <text class="ovname" x="80" y="216">Restaurant platforms</text>
+      <text class="ovsub" x="80" y="236">R365 &middot; MarginEdge &middot; MarketMan</text>
+      <rect x="364" y="180" width="250" height="94" rx="12" class="ovbox"/>
+      <text class="ovname" x="378" y="216">Hotel procurement suites</text>
+      <text class="ovsub" x="378" y="236">BirchStreet &middot; Fourth</text>
+      <rect x="364" y="52" width="250" height="94" rx="12" fill="rgba(198,255,61,.12)" stroke="var(--lime)" stroke-width="2" stroke-dasharray="6 5"/>
+      <text class="ovopen" x="378" y="84">The open center</text>
+      <text class="ovname" x="378" y="112" style="font-size:19px">Craftable</text>
+    </svg></div>
+    <figcaption>Placement is a strategic read of public positioning, not a measured score. The upper-right lane, beverage depth inside a full back office at property scale, is the one no incumbent occupies.</figcaption>
+  </figure>
+  <div class="statrow">
+    <div class="stat l4"><div class="n">3 camps, 1 gap</div><div class="l">The field maps to three camps with an empty center Craftable can own</div></div>
+    <div class="stat t"><div class="n">~18K</div><div class="l">Warm followers already in reach: 11K company page, 6.9K on the CEO</div></div>
+    <div class="stat o"><div class="n">$0 paid</div><div class="l">Zero paid search today against a searched category: a wide-open capture lane</div></div>
+    <div class="stat b"><div class="n">1 motion</div><div class="l">One system tied back to HubSpot deals and revenue, not clicks</div></div>
+  </div>
+
+  <div class="sec"><h3 style="font-size:19px;margin-bottom:2px">The one-read summary</h3></div>
+  <div class="grid2">
+    <div class="card tl"><div class="k">The opening</div><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">Restaurant platforms treat the bar as a food subset, enterprise hotel suites were never built for the mid-market, and beverage tools stop at counting. The open center is a modern, beverage-led, prescriptive full back office for multi-outlet hospitality. That is Craftable's to own.</p></div>
+    <div class="card tt"><div class="k">The audience</div><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">A nameable set of beverage-led groups, mid-market properties, and mixed-concept operators, bought by a committee across Operations, Finance, Technology, and Accounting. Warm first, given the followers and site traffic already here, then the named accounts.</p></div>
+    <div class="card tb"><div class="k">The play</div><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">One motion: thought leadership creates demand, LinkedIn qualifies and pursues the named accounts, Google captures the operators already searching, and DemandSense ties it all back to HubSpot deals. Start warm, add the open lanes, scale on proof.</p></div>
+    <div class="card to"><div class="k">Where it starts</div><p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">The foundation, content and warm traffic, already exists. The first wins are the wide-open pieces: Google capture, the account-based spine, Web ID, and the HubSpot revenue tie. Three packages, climbed as each proves out.</p></div>
+  </div>
+
+  <div class="sec"><h3 style="font-size:19px;margin-bottom:2px">The moves, in sequence</h3><p class="lede" style="margin-top:6px">Each move has its own tab. Read them in order, or jump to any.</p></div>
+  <div class="grid2">
+    <div class="card tl move" data-goto="whitespace"><div class="movenum">Move 01</div><h3 style="margin:4px 0 6px;font-size:17px">Own the empty center</h3><p style="margin:0;font-size:14px;color:var(--sub)">Ten competitors across three camps, and the open lane no one occupies: beverage depth inside a full back office, for the mid-market property.</p><span class="movelink">Open White Space &rarr;</span></div>
+    <div class="card tt move" data-goto="targeting"><div class="movenum">Move 02</div><h3 style="margin:4px 0 6px;font-size:17px">Target the committee, warm-first</h3><p style="margin:0;font-size:14px;color:var(--sub)">Warm pools, three named-account lists, and three cold personas, each mapped to a lane, with the enrichment signals and keyword map.</p><span class="movelink">Open Targeting &rarr;</span></div>
+    <div class="card tb move" data-goto="ecosystem"><div class="movenum">Move 03</div><h3 style="margin:4px 0 6px;font-size:17px">See the whole system, forward</h3><p style="margin:0;font-size:14px;color:var(--sub)">Every motion in the growth system on one board, with what starts now, what gets built during the engagement, and what is sequenced for later.</p><span class="movelink">Open Ecosystem &rarr;</span></div>
+    <div class="card to move" data-goto="howitworks"><div class="movenum">Move 04</div><h3 style="margin:4px 0 6px;font-size:17px">Run it as one motion</h3><p style="margin:0;font-size:14px;color:var(--sub)">Six connected layers, LinkedIn as the hub, and the DemandSense-to-HubSpot loop that reports influenced pipeline instead of clicks.</p><span class="movelink">Open How It Works &rarr;</span></div>
+    <div class="card tr move" data-goto="paths" style="grid-column:1 / -1"><div class="movenum">Move 05</div><h3 style="margin:4px 0 6px;font-size:17px">Start where the budget sits</h3><p style="margin:0;font-size:14px;color:var(--sub)">Three scoped packages, entry to accelerated scale, built from the same motion and mapped to how Impactable prices managed work. The recommended one fills the open lanes first.</p><span class="movelink">Open Paths Forward &rarr;</span></div>
+  </div>
+
+  <div class="why" style="margin-top:18px"><b>How to read this room:</b> White Space and Targeting are the completed diagnostics, shown in full. Ecosystem and How It Works are the recommended system. Paths Forward is where it goes next. Use the tabs up top, or book a call and we walk it together.</div>
+
+  <div class="btnrow dark-panel" style="background:#071A38;border-radius:16px;padding:24px;margin-top:20px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+    <div style="font-family:var(--display);font-size:clamp(18px,2.6vw,24px);color:#F4F1EA">See how the pieces connect, or talk it through.</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn ghost" data-goto="howitworks">See how it works &rarr;</a>
+      <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a 15-min call</a>
+    </div>
+  </div>
+
+  <div class="metastrip">
+    <span>Prepared <b>August 11, 2026</b></span>
+    <span>For <b>Craftable &middot; craftable.com</b></span>
+    <span>By <b>Impactable</b></span>
+    <span>Status <b>Diagnostics complete</b></span>
+  </div>
+</section>
+<section class="view" id="whitespace">
+
+<!-- 1. LANDSCAPE AT A GLANCE -->
+<div class="sec">
+  <div class="secnum">01 &mdash; The Field</div>
+  <h2>The landscape at a glance</h2>
+  <p class="lede">Ten platforms map cleanly into three camps. Each is strong in its own corner and absent from the others. The center, a modern and beverage-led back office spanning restaurants, bars, and properties, is where none of them sit.</p>
+</div>
+
+<div class="card tb camp">
+  <div class="k">Camp 1 &middot; Restaurant-first back-office platforms</div>
+  <div class="players">
+    <span class="tag">Restaurant365</span><span class="tag">MarginEdge</span><span class="tag">MarketMan</span><span class="tag">Crunchtime</span><span class="tag">xtraCHEF by Toast</span>
+  </div>
+  <p style="margin:0">Modern and operator-facing, strong on food cost, inventory, and AP. Built for restaurants, and they treat beverage as a subset of food. No hotel or property motion.</p>
+</div>
+
+<div class="card to camp">
+  <div class="k">Camp 2 &middot; Enterprise hotel procurement &amp; operations suites</div>
+  <div class="players">
+    <span class="tag">BirchStreet</span><span class="tag">Fourth</span><span class="tag">Adaco</span><span class="tag">HotSchedules</span>
+  </div>
+  <p style="margin:0">These do serve hotels, resorts, and casinos, at Marriott, Hilton, and Hyatt scale, with deep procurement, accounts payable, and, for Fourth, labor. They are enterprise-first, procurement or labor-led rather than beverage-led, older-generation in parts, and priced and scoped away from the mid-market.</p>
+</div>
+
+<div class="card tt camp">
+  <div class="k">Camp 3 &middot; Beverage &amp; bar inventory specialists</div>
+  <div class="players">
+    <span class="tag">WISK</span><span class="tag">BevSpot</span><span class="tag">Backbar</span><span class="tag">Sculpture Hospitality</span><span class="tag">Bar-i</span>
+  </div>
+  <p style="margin:0">These own bar inventory, pour cost, and liquor counting, some with real depth. They are inventory-and-counting point tools, not a full financial back office, and most stop short of AP automation, property accounting, and multi-outlet roll-up.</p>
+</div>
+
+<div class="center-callout dark-panel">
+  <div class="k">The empty center</div>
+  <p>A modern, beverage-led, prescriptive back office that spans restaurants, bars, and properties, sits on top of the systems already in place, and serves the mid-market rather than only the enterprise. That center is Craftable's to own.</p>
+</div>
+
+<p class="mentions"><b>Also in the field:</b> Yellow Dog Software (retail, food and beverage, and concessions inventory for resorts, casinos, stadiums, and hotels), Sculpture Hospitality and Bar-i (managed and scale-based beverage counting), Partender (fast bar counts), Apicbase and Growzer (European food and beverage management, including hotels), Lightspeed and TouchBistro (point-of-sale-native inventory), and newer AI back-of-house tools such as Nory and Restoke.</p>
+
+<!-- 2. POSITIONING MAP -->
+<div class="sec">
+  <div class="secnum">02 &mdash; The Open Lane</div>
+  <h2>Where nobody is standing</h2>
+  <p class="lede">Plot the field on the two axes that separate the camps: how much of hospitality each serves, and whether it is built around beverage or around food, procurement, and accounting. The three camps occupy three corners. The beverage-led, full-hospitality corner is open.</p>
+</div>
+
+<figure>
+  <div class="figtitle">Category positioning map</div>
+  <div class="figsub">Horizontal: reach across hospitality &nbsp;&middot;&nbsp; Vertical: beverage-led vs food, procurement &amp; accounting</div>
+  <div class="legend">
+    <span><i style="background:var(--bar-lo)"></i>Restaurant platforms</span>
+    <span><i style="background:var(--orange)"></i>Hotel procurement suites</span>
+    <span><i style="background:var(--teal)"></i>Beverage point tools</span>
+    <span><i style="background:var(--lime)"></i>Craftable</span>
+  </div>
+  <div class="figscroll">
+  <svg viewBox="0 0 720 520" role="img" aria-label="Positioning map. Restaurant platforms cluster lower-left. Hotel procurement suites sit lower-right, high on reach but low on beverage. Beverage point tools sit upper-left, high on beverage but narrow reach. The upper-right region, full-hospitality and beverage-led, is highlighted as the open center and holds only Craftable.">
+    <style>
+      .axis{stroke:var(--line);stroke-width:1.5}
+      .axlab{fill:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+      .dot-lab{fill:var(--sub);font-family:var(--body);font-size:12.5px;font-weight:600}
+      .openlab{fill:var(--lime-text);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+    </style>
+    <rect x="410" y="55" width="270" height="175" rx="10" fill="var(--open-fill)" stroke="var(--lime)" stroke-dasharray="5 5" stroke-width="1.5"/>
+    <text x="545" y="82" text-anchor="middle" class="openlab">Open center</text>
+    <line x1="60" y1="55" x2="60" y2="455" class="axis"/>
+    <line x1="60" y1="455" x2="685" y2="455" class="axis"/>
+    <text x="66" y="46" class="axlab">Beverage-led</text>
+    <text x="66" y="476" class="axlab">Food, procurement &amp; accounting</text>
+    <text x="70" y="447" class="axlab" text-anchor="start">Restaurant only</text>
+    <text x="681" y="447" class="axlab" text-anchor="end">Full hospitality: hotels, resorts, casinos</text>
+    <!-- beverage point tools (upper-left) teal -->
+    <circle cx="120" cy="120" r="8" fill="var(--teal)"/><text x="134" y="124" class="dot-lab">BevSpot</text>
+    <circle cx="150" cy="165" r="8" fill="var(--teal)"/><text x="164" y="169" class="dot-lab">Backbar</text>
+    <circle cx="300" cy="140" r="8" fill="var(--teal)"/><text x="314" y="144" class="dot-lab">WISK</text>
+    <!-- restaurant platforms (lower-left) blue -->
+    <circle cx="120" cy="400" r="8" fill="var(--bar-lo)"/><text x="134" y="404" class="dot-lab">Restaurant365</text>
+    <circle cx="175" cy="360" r="8" fill="var(--bar-lo)"/><text x="189" y="364" class="dot-lab">MarginEdge</text>
+    <circle cx="140" cy="320" r="8" fill="var(--bar-lo)"/><text x="154" y="324" class="dot-lab">MarketMan</text>
+    <circle cx="215" cy="410" r="8" fill="var(--bar-lo)"/><text x="229" y="414" class="dot-lab">Crunchtime</text>
+    <circle cx="150" cy="278" r="8" fill="var(--bar-lo)"/><text x="164" y="282" class="dot-lab">xtraCHEF</text>
+    <!-- hotel procurement (lower-right) orange -->
+    <circle cx="560" cy="405" r="8" fill="var(--orange)"/><text x="574" y="409" class="dot-lab">BirchStreet</text>
+    <circle cx="510" cy="365" r="8" fill="var(--orange)"/><text x="524" y="369" class="dot-lab">Fourth / Adaco</text>
+    <!-- Craftable (open center) lime -->
+    <circle cx="545" cy="150" r="17" fill="none" stroke="var(--lime)" stroke-width="2"/>
+    <circle cx="545" cy="150" r="10" fill="var(--lime)"/>
+    <text x="545" y="188" text-anchor="middle" class="dot-lab" style="font-weight:800;fill:var(--lime-text)">Craftable</text>
+  </svg>
+  </div>
+  <figcaption>Placements are a strategic read of public positioning and proof, not a measured score. WISK sits closest to the center because it markets a multi-outlet hotel plan, but as an inventory-and-counting tool rather than a full back office, so it stops short of the center on completeness.</figcaption>
+</figure>
+
+<!-- 3. SATURATION -->
+<div class="sec">
+  <div class="secnum">03 &mdash; Messaging Saturation</div>
+  <h2>What everyone is saying</h2>
+  <p class="lede">The claims that recur across all three camps. These are table stakes, and the current Craftable hero lands on the two most crowded, real-time visibility and AI.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th>Saturated theme</th><th>Who says it</th><th>Saturation</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Real-time cost visibility</td><td>Every platform, all three camps</td><td><span class="badge b-md">High</span></td></tr>
+      <tr><td class="dim">AI, intelligent back office</td><td>Restaurant365, MarketMan, Crunchtime, WISK, BirchStreet, Fourth, Craftable</td><td><span class="badge b-md">High, rising</span></td></tr>
+      <tr><td class="dim">Up to 5% food or beverage cost reduction</td><td>Restaurant365, MarketMan, WISK, Craftable</td><td><span class="badge b-md">High</span></td></tr>
+      <tr><td class="dim">All-in-one, one platform</td><td>Restaurant365, MarginEdge, Crunchtime, BirchStreet, Craftable</td><td><span class="badge b-md">High</span></td></tr>
+      <tr><td class="dim">Automate invoices, kill data entry</td><td>MarginEdge, MarketMan, xtraCHEF, BirchStreet, WISK, Craftable</td><td><span class="badge b-md">High</span></td></tr>
+      <tr><td class="dim">Built for multi-unit or multi-property</td><td>Nearly all</td><td><span class="badge b-md">High</span></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="why" style="margin-top:14px"><b>Read:</b> real-time visibility and AI are now claimed by all three camps. Leading on real-time visibility or AI puts a brand squarely in that crowd. The differentiators in the next sections are what move it out in front.</div>
+
+<!-- 4. WHITE SPACE -->
+<div class="sec">
+  <div class="secnum">04 &mdash; White Space</div>
+  <h2>The gaps, in sequence</h2>
+  <p class="lede">What nobody in the field is saying, read against the full landscape. Strongest as one connected position: beverage depth, inside a full back office, for multi-outlet mid-market hospitality, on top of the existing stack, and prescriptive rather than just descriptive.</p>
+</div>
+
+<div class="card tl">
+  <div class="gaphead"><h3>Gap 1 &middot; Beverage depth inside a full back office</h3><span class="badge b-hi">Opportunity: High</span></div>
+  <div class="gap-fields">
+    <div class="row"><span class="lab">The gap</span>The restaurant platforms treat the bar as a subset of food. The tools that treat beverage as first-class, WISK, BevSpot, and Backbar, are inventory-and-counting point tools without AP automation, property accounting, or full financials. No one combines specialist beverage depth with a complete back office.</div>
+    <div class="row"><span class="lab">Why it matters</span>A large share of variance and shrinkage lives behind the bar, and it behaves differently from food. Operators either bolt a bar tool onto a food platform or run beverage in a silo. The single-platform answer is missing.</div>
+    <div class="row"><span class="lab">Evidence</span>Craftable's Bevager heritage; third-party reviewers place Bevager in the bar-inventory comparison set, which confirms the beverage depth is real and recognized, and Craftable carries it into a full platform (review sites, competitor sites).</div>
+  </div>
+  <div class="why"><b>Read:</b> the most ownable lane in the field, and the clearest one to bring to the front.</div>
+</div>
+
+<div class="card tt">
+  <div class="gaphead"><h3>Gap 2 &middot; A modern, mid-market back office for hotel and multi-outlet F&amp;B</h3><span class="badge b-hi">Opportunity: High</span></div>
+  <div class="gap-fields">
+    <div class="row"><span class="lab">The gap</span>Hotels are served, but by enterprise procurement suites. BirchStreet and Fourth's Adaco run hotel F&amp;B procurement at Marriott and Hilton scale, procurement and labor-led, older-generation in parts, and priced for the enterprise. The modern, operator-facing, beverage-aware back office for the mid-market property is unbuilt.</div>
+    <div class="row"><span class="lab">Why it matters</span>Mid-market hotels, resorts, casinos, and multi-outlet groups run many concepts under one entity but sit below the enterprise procurement tier and above the single-restaurant tools. They are underserved from both directions.</div>
+    <div class="row"><span class="lab">Evidence</span>Craftable already serves Kimpton, Pyramid Global, CoralTree, Hotel Swexan, bartaco, and PopStroke; BirchStreet and Fourth center on enterprise hotel groups and exclude the mid-market (competitor sites, case studies).</div>
+  </div>
+  <div class="why"><b>Read:</b> defensible because it is proof-backed and honestly bounded against named incumbents.</div>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>Gap 3 &middot; Tell operators what to do, not just what happened</h3><span class="badge b-md">Opportunity: Medium to high</span></div>
+  <div class="gap-fields">
+    <div class="row"><span class="lab">The gap</span>The restaurant platforms compete on visibility, the hotel suites on procurement and spend, and the beverage tools on counting. Almost none frame the product around the next action to take.</div>
+    <div class="row"><span class="lab">Why it matters</span>An operator running several outlets does not need another dashboard. They need a ranked list of what to fix today.</div>
+    <div class="row"><span class="lab">Evidence</span>Craftable's Operator AI already frames ranked daily actions before they hit the P&amp;L (site).</div>
+  </div>
+  <div class="why"><b>Read:</b> the durable version is ranked actions for a multi-outlet, beverage-led operation, not generic AI, which is already crowding in.</div>
+</div>
+
+<div class="card tt">
+  <div class="gaphead"><h3>Gap 4 &middot; Mixed-concept complexity under one modern roof</h3><span class="badge b-md">Opportunity: Medium</span></div>
+  <div class="gap-fields">
+    <div class="row"><span class="lab">The gap</span>Enterprise suites handle many properties as procurement; restaurant tools are per-location. The mid-market group running a restaurant, a bar, room service, and an entertainment venue still lacks one modern operator-facing spine across all of it.</div>
+    <div class="row"><span class="lab">Why it matters</span>These groups need one purchasing and AP spine across every outlet, not four instances of a single-restaurant tool or an enterprise procurement rollout.</div>
+    <div class="row"><span class="lab">Evidence</span>Craftable's base includes food-and-entertainment and multi-outlet hospitality such as PopStroke, resorts, and casinos (site, case studies).</div>
+  </div>
+  <div class="why"><b>Read:</b> the property structure itself is the moat the other camps have not built for in the mid-market.</div>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>Gap 5 &middot; Sit on top of the stack, do not force a migration</h3><span class="badge b-md">Opportunity: Medium</span></div>
+  <div class="gap-fields">
+    <div class="row"><span class="lab">The gap</span>Restaurant365's model is to become your accounting system; enterprise suites arrive as multi-month implementations. No one makes a clear virtue of keeping the operator's existing accounting, ERP, and payments and layering on top.</div>
+    <div class="row"><span class="lab">Why it matters</span>Many groups will not rip out a working ledger or run an enterprise procurement project. Integrating with what they already run removes the biggest reason a deal stalls.</div>
+    <div class="row"><span class="lab">Evidence</span>Craftable cites 1,000+ integrations, M3 for hotels, and the Finexio payments partnership; Restaurant365 reviews flag implementation weight (sites, reviews).</div>
+  </div>
+  <div class="why"><b>Read:</b> "keep your ledger, we sit on top" answers the top reason a migration-based deal slows.</div>
+</div>
+
+<!-- 5. PROFILES -->
+<div class="sec">
+  <div class="secnum">05 &mdash; Profiles</div>
+  <h2>The players, up close</h2>
+  <p class="lede">The four restaurant-first platforms in full, then the hotel and beverage camps in brief. Headlines and strategic reads stay on screen; the long field detail on the core four sits behind a control on each card.</p>
+</div>
+
+<h3 style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-text);margin:22px 0 2px">Camp 1 &middot; Restaurant-first platforms</h3>
+
+<div class="card tb">
+  <div class="gaphead"><h3>Restaurant365</h3><span class="badge b-rest">Accounting-first incumbent</span></div>
+  <p style="margin-top:12px">The unified back office for restaurants: accounting, inventory, workforce, and payroll in one restaurant-specific platform, now led by R365 AI. 40,000+ restaurants and the deepest review presence in the category.</p>
+  <div class="why"><b>Strategic read:</b> strongest where a group wants to replace its accounting system outright. That same strength is the switching cost that slows adoption, and the restaurant-only, accounting-first shape leaves beverage depth and hotels open.</div>
+  <details class="disc"><summary><span class="chipmark">+</span><span class="verb">Show </span>full profile</summary>
+    <div class="disc-body"><table class="ftable"><tbody>
+      <tr><th>Founded</th><td>2011</td></tr>
+      <tr><th>Target audience</th><td>Multi-location restaurant groups, one to fifty locations, plus enterprise and franchise. Restaurants, not hotels.</td></tr>
+      <tr><th>Pricing</th><td>Sales-led, custom, not public. Premium, with a meaningful implementation commitment.</td></tr>
+      <tr><th>Proof and presence</th><td>40,000+ restaurants; around 4.6 of 5 across 300+ reviews (G2, press).</td></tr>
+      <tr><th>Visible limitations</th><td>Restaurant-only; heavy implementation and ledger migration; dated interface per reviewers; price opacity.</td></tr>
+    </tbody></table></div>
+  </details>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>MarginEdge</h3><span class="badge b-rest">Real-time cost specialist</span></div>
+  <p style="margin-top:12px">The leading food cost management software: real-time food costs, daily P&amp;Ls, and unlimited bill pay. Operator-built, and the one player publishing flat, all-inclusive pricing at around $350 per location.</p>
+  <div class="why"><b>Strategic read:</b> the reviewer favorite for cost transparency and the price benchmark a prospect will cite. Its clarity comes from a narrow shape. It does not reach hotels, mixed-concept properties, or beverage-led complexity.</div>
+  <details class="disc"><summary><span class="chipmark">+</span><span class="verb">Show </span>full profile</summary>
+    <div class="disc-body"><table class="ftable"><tbody>
+      <tr><th>Founded</th><td>2015</td></tr>
+      <tr><th>Target audience</th><td>Independent and small multi-unit full-service restaurants, QSR to fine dining. Restaurants, not hotels.</td></tr>
+      <tr><th>Pricing</th><td>Flat, around $350 per location per month, invoices and bill pay included.</td></tr>
+      <tr><th>Proof and presence</th><td>Around 4.4 to 4.6 of 5; 60+ POS integrations (G2, Capterra).</td></tr>
+      <tr><th>Visible limitations</th><td>Restaurants only; bill pay US-only; limited enterprise ERP fit; beverage as a feature, not a specialization.</td></tr>
+    </tbody></table></div>
+  </details>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>MarketMan</h3><span class="badge b-rest">Inventory-first</span></div>
+  <p style="margin-top:12px">AI-powered inventory and purchasing: real-time insight and automation to lower food costs, an alternative to POS-bolted inventory. From around $199 per month, and the highest review score in the set at 4.7.</p>
+  <div class="why"><b>Strategic read:</b> best-in-class at the inventory and purchasing layer and well liked, but deliberately narrow. It stops short of AP, payments, and financial reporting, and beverage is liquor counting rather than a category.</div>
+  <details class="disc"><summary><span class="chipmark">+</span><span class="verb">Show </span>full profile</summary>
+    <div class="disc-body"><table class="ftable"><tbody>
+      <tr><th>Founded</th><td>2012</td></tr>
+      <tr><th>Target audience</th><td>Independent restaurants to multi-location groups, coffee shops, QSR, hospitality groups.</td></tr>
+      <tr><th>Pricing</th><td>From around $199 per month, roughly 15% off annually, plus a $500 setup fee.</td></tr>
+      <tr><th>Proof and presence</th><td>Consistent 4.7 of 5 across review platforms (G2, Capterra).</td></tr>
+      <tr><th>Visible limitations</th><td>Inventory-first, not full back office; no direct payment processing; does not sync with some accounting systems.</td></tr>
+    </tbody></table></div>
+  </details>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>Crunchtime</h3><span class="badge b-rest">Enterprise ops suite</span></div>
+  <p style="margin-top:12px">The enterprise operations suite: inventory, labor and scheduling, kitchen display, and execution across 100,000+ locations for brands like Chipotle, Domino's, and Five Guys. Labor and multi-store execution at chain scale.</p>
+  <div class="why"><b>Strategic read:</b> the enterprise ceiling of the category, strongest on labor and execution. Its size and chain orientation make it a poor fit for mid-market beverage-led groups and hotel F&amp;B, exactly where Craftable's proof sits.</div>
+  <details class="disc"><summary><span class="chipmark">+</span><span class="verb">Show </span>full profile</summary>
+    <div class="disc-body"><table class="ftable"><tbody>
+      <tr><th>In market</th><td>30+ years</td></tr>
+      <tr><th>Target audience</th><td>Large multi-unit and enterprise restaurant brands. 100,000+ locations.</td></tr>
+      <tr><th>Pricing</th><td>Sales-led, enterprise, not public.</td></tr>
+      <tr><th>Proof and presence</th><td>Marquee enterprise logos; SOC 1 Type 2 and SOC 2 Type 2 (site).</td></tr>
+      <tr><th>Visible limitations</th><td>Large chains; labor and execution are the center of gravity, not AP or financials; no beverage specialization and no hotel motion.</td></tr>
+    </tbody></table></div>
+  </details>
+</div>
+
+<h3 style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust-text);margin:26px 0 2px">Camp 2 &middot; Enterprise hotel procurement &amp; operations</h3>
+
+<div class="card to lentry">
+  <div class="gaphead"><h3>BirchStreet Systems</h3><span class="badge b-hotel">Hotel procure-to-pay</span></div>
+  <p style="margin-top:12px">The complete hospitality procure-to-pay platform: eProcurement, AP automation, inventory, recipe management, supplier payments, and analytics across properties. Marriott, Hyatt, Four Seasons, Hilton, Omni, Accor. 16,000+ locations, 130 countries, 400,000+ suppliers.</p>
+  <div class="why"><b>Read for Craftable:</b> a genuine hotel F&amp;B incumbent, but a procurement and spend-control spine for large hotel groups, not a beverage-led or operator-facing daily back office. Quote-based and enterprise, it sits above the mid-market Craftable serves.</div>
+</div>
+
+<div class="card to lentry">
+  <div class="gaphead"><h3>Fourth &middot; Adaco &amp; HotSchedules</h3><span class="badge b-hotel">Hospitality workforce &amp; inventory</span></div>
+  <p style="margin-top:12px">Hospitality workforce and inventory suite. Its Adaco product is a purpose-built hotel and leisure inventory and procurement system, 30+ years, 1,200+ locations across 52 countries; HotSchedules is its workforce core. 120,000 locations across the group.</p>
+  <div class="why"><b>Read for Craftable:</b> the strongest hotel incumbent to name plainly, and one Craftable's leadership knows well. Fourth is workforce-led with procurement and inventory alongside; Adaco is a capable but older-generation hotel workhorse, not a modern beverage-led back office.</div>
+</div>
+
+<h3 style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-text);margin:26px 0 2px">Camp 3 &middot; Beverage &amp; bar inventory specialists</h3>
+
+<div class="card tt lentry">
+  <div class="gaphead"><h3>WISK.ai</h3><span class="badge b-bev">Beverage inventory, AI</span></div>
+  <p style="margin-top:12px">AI-driven bar and beverage inventory with a food bundle: mobile counting, invoice capture, recipe costing, and POS-synced depletion for tight pour-cost control. Markets a multi-outlet plan for hotels, resorts, and casinos. Published pricing from around $189 per month.</p>
+  <div class="why"><b>Read for Craftable:</b> the closest neighbor on the beverage axis and the one to watch. Inventory-and-counting first, not a full financial back office, and independent review volume is thin. Craftable pairs comparable beverage depth with the full back office and property fit WISK does not carry.</div>
+</div>
+
+<div class="card tt lentry">
+  <div class="gaphead"><h3>BevSpot</h3><span class="badge b-bev">Bar-first F&amp;B inventory</span></div>
+  <p style="margin-top:12px">Cloud food and beverage inventory, ordering, and invoicing with POS-synced sales data, recipe and menu costing, and invoice digitization. Beverage-only plans from around $219 per month.</p>
+  <div class="why"><b>Read for Craftable:</b> a capable bar-program tool that also touches food, but a point solution for counts, orders, and pour cost, not a full back office with AP automation and property accounting.</div>
+</div>
+
+<div class="card tt lentry">
+  <div class="gaphead"><h3>Backbar</h3><span class="badge b-bev">Free-to-start bar inventory</span></div>
+  <p style="margin-top:12px">Mobile-first beverage inventory, one-click vendor ordering, and drink costing built for speed. A beverage specialist, deep on the bar and nothing else, with a casino liquor use case marketed.</p>
+  <div class="why"><b>Read for Craftable:</b> the low-cost, single-purpose end of the beverage camp. Confirms real demand for beverage-specific depth, and marks the floor Craftable sits well above with a full platform.</div>
+</div>
+
+<h3 style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-text);margin:26px 0 2px">Camp 1 &middot; Point-of-sale native</h3>
+
+<div class="card tb lentry">
+  <div class="gaphead"><h3>xtraCHEF by Toast</h3><span class="badge b-rest">POS-native back office</span></div>
+  <p style="margin-top:12px">Restaurant back-office tools for invoice automation, recipe costing, inventory, and cost reporting, turning Toast POS sales data into cost insight. Acquired by Toast in 2021. Quote-based, strongest inside the Toast ecosystem; independent reviews are modest and divergent.</p>
+  <div class="why"><b>Read for Craftable:</b> restaurant-only and most valuable when the operator is already on Toast. No hotel motion and no beverage specialization. Relevant mainly where a prospect is Toast-committed.</div>
+</div>
+
+<!-- 6. LANDSCAPE COMPARISON -->
+<div class="sec">
+  <div class="secnum">06 &mdash; At a Glance</div>
+  <h2>Landscape comparison</h2>
+  <p class="lede">The camps on the dimensions that decide fit. Craftable is the only column that reads well across reach, beverage depth, back-office completeness, and mid-market fit at once.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th class="dim">Dimension</th><th>Restaurant platforms</th><th>Hotel procurement suites</th><th>Beverage point tools</th><th>Craftable</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Example players</td><td class="mono-sm">R365, MarginEdge, MarketMan, Crunchtime, xtraCHEF</td><td class="mono-sm">BirchStreet, Fourth / Adaco</td><td class="mono-sm">WISK, BevSpot, Backbar</td><td class="mono-sm">Craftable</td></tr>
+      <tr><td class="dim">Reach across hospitality</td><td>Restaurants only</td><td>Hotels, resorts, casinos</td><td>Bars, some restaurants</td><td class="na">Restaurants, bars, hotels, resorts</td></tr>
+      <tr><td class="dim">Beverage depth</td><td>Food subset</td><td>Not beverage-led</td><td>Deep, specialist</td><td class="na">Deep, inside a full back office</td></tr>
+      <tr><td class="dim">Back-office completeness</td><td>Full (restaurant)</td><td>Full (procurement, AP)</td><td>Inventory only</td><td class="na">Full: ordering, inventory, recipe, AP</td></tr>
+      <tr><td class="dim">Prescriptive action</td><td>Reporting</td><td>Procurement, spend</td><td>Counting, pour cost</td><td class="na">Ranked operator actions</td></tr>
+      <tr><td class="dim">Mid-market fit</td><td>Yes</td><td>Enterprise-first</td><td>Yes (small)</td><td class="na">Yes</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 7. UVP -->
+<div class="sec">
+  <div class="secnum">07 &mdash; Positioning Direction</div>
+  <h2>The position to own</h2>
+  <p class="lede">Built from the empty center, not from today's homepage. One statement, the claims to dial back, and the differentiators that are genuinely Craftable's to hold.</p>
+</div>
+<div class="uvp dark-panel">
+  <div class="k">Recommended positioning</div>
+  <p>The back office built for beverage-led and multi-outlet hospitality, restaurants, bars, hotels, and resorts, that sits on top of the systems you already run and tells your operators what to do next, not just what happened.</p>
+</div>
+  <figure style="margin:6px 0 18px">
+    <div class="figtitle">Where the messaging is crowded, and where it is open</div>
+    <div class="figsub">Estimated share of category players leaning on each claim, from public positioning</div>
+    <div class="figscroll"><svg viewBox="0 0 680 375" role="img" aria-label="Bar chart. The crowded claims most intelligent, real-time visibility, all-in-one, and the up-to-5-percent stat have long bars. The open claims beverage depth in a full back office, sits on top of your stack, prescriptive actions, mid-market property, and named luxury proof have short bars." style="width:100%;height:auto;min-width:580px">
+      <style>
+        .satlab{fill:var(--sub);font-family:var(--body);font-size:12.5px}
+        .satgrp{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+        .sattrack{fill:var(--line-soft)}
+        .satval{fill:var(--muted);font-family:var(--mono);font-size:11px}
+      </style>
+      <text class="satgrp" x="256" y="26" text-anchor="end" style="fill:var(--terra-text)">Crowded &middot; dial these back</text><text class="satlab" x="256" y="56" text-anchor="end">“Most intelligent” / AI-led</text><rect class="sattrack" x="265" y="44" width="360" height="16" rx="4"/><rect x="265" y="44" width="342.0" height="16" rx="4" fill="var(--rust)"/><text class="satval" x="615.0" y="56">95</text><text class="satlab" x="256" y="86" text-anchor="end">Real-time visibility</text><rect class="sattrack" x="265" y="74" width="360" height="16" rx="4"/><rect x="265" y="74" width="324.0" height="16" rx="4" fill="var(--rust)"/><text class="satval" x="597.0" y="86">90</text><text class="satlab" x="256" y="116" text-anchor="end">All-in-one platform</text><rect class="sattrack" x="265" y="104" width="360" height="16" rx="4"/><rect x="265" y="104" width="306.0" height="16" rx="4" fill="var(--rust)"/><text class="satval" x="579.0" y="116">85</text><text class="satlab" x="256" y="146" text-anchor="end">“Up to 5%” savings stat</text><rect class="sattrack" x="265" y="134" width="360" height="16" rx="4"/><rect x="265" y="134" width="259.2" height="16" rx="4" fill="var(--rust)"/><text class="satval" x="532.2" y="146">72</text><text class="satgrp" x="256" y="196" text-anchor="end" style="fill:var(--lime-text)">Open &middot; yours to own</text><text class="satlab" x="256" y="226" text-anchor="end">Beverage depth in a full back office</text><rect class="sattrack" x="265" y="214" width="360" height="16" rx="4"/><rect x="265" y="214" width="79.2" height="16" rx="4" fill="var(--lime)"/><text class="satval" x="352.2" y="226">22</text><text class="satlab" x="256" y="256" text-anchor="end">Sits on top of your stack</text><rect class="sattrack" x="265" y="244" width="360" height="16" rx="4"/><rect x="265" y="244" width="93.6" height="16" rx="4" fill="var(--lime)"/><text class="satval" x="366.6" y="256">26</text><text class="satlab" x="256" y="286" text-anchor="end">Prescriptive next actions</text><rect class="sattrack" x="265" y="274" width="360" height="16" rx="4"/><rect x="265" y="274" width="57.6" height="16" rx="4" fill="var(--lime)"/><text class="satval" x="330.6" y="286">16</text><text class="satlab" x="256" y="316" text-anchor="end">Modern mid-market property</text><rect class="sattrack" x="265" y="304" width="360" height="16" rx="4"/><rect x="265" y="304" width="54.0" height="16" rx="4" fill="var(--lime)"/><text class="satval" x="327.0" y="316">15</text><text class="satlab" x="256" y="346" text-anchor="end">Named luxury proof</text><rect class="sattrack" x="265" y="334" width="360" height="16" rx="4"/><rect x="265" y="334" width="43.2" height="16" rx="4" fill="var(--lime)"/><text class="satval" x="316.2" y="346">12</text>
+    </svg></div>
+    <figcaption>Bar length is a directional read of how many category players lean on each claim, not a measured share of voice. The pattern is the point: the loudest claims are the most contested, and Craftable's real differentiators sit in the quiet lanes.</figcaption>
+  </figure>
+<div class="grid2">
+  <div class="card tr">
+    <div class="k">Dial back</div>
+    <h3 style="margin:6px 0 4px;font-size:17px">Claims that put you in the crowd</h3>
+    <ul class="list dial">
+      <li><b>"Most intelligent back-office platform"</b> as the lead. AI is now claimed across all three camps.</li>
+      <li><b>Generic real-time visibility</b> as the primary hook. It is table stakes everywhere.</li>
+      <li><b>The up-to-5% cost stat</b> as a headline. Restaurant365, MarketMan, and WISK cite the same range.</li>
+      <li><b>"All-in-one platform"</b> as the differentiator. Both restaurant platforms and hotel suites claim it.</li>
+    </ul>
+  </div>
+  <div class="card tl">
+    <div class="k">Own</div>
+    <h3 style="margin:6px 0 4px;font-size:17px">Differentiators that are yours to hold</h3>
+    <ul class="list">
+      <li><b>Beverage depth carried into a full back office,</b> which the restaurant platforms lack and the beverage point tools cannot match on completeness.</li>
+      <li><b>Modern, mid-market hotel and multi-outlet F&amp;B,</b> below the enterprise procurement tier of BirchStreet and Fourth.</li>
+      <li><b>Sits on top of the existing stack</b> through 1,000+ integrations, M3, and Finexio, versus a migration or enterprise rollout.</li>
+      <li><b>Prescriptive ranked actions</b> through Operator AI, framed for multi-outlet operations.</li>
+      <li><b>Named luxury and property proof:</b> Jose Andres Group, Daniel, Jean-Georges, Kimpton, Pyramid Global, CoralTree, Hotel Swexan.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 8. HOOKS -->
+<div class="sec">
+  <div class="secnum">08 &mdash; Messaging Hooks</div>
+  <h2>Hooks by buying stage</h2>
+  <p class="lede">The position translated into language for ads, headlines, and sales conversations, framed to say what the three camps are not saying.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th>Stage</th><th>Hooks</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Unaware<br><span class="mono-sm">Problem education</span></td><td>"Your kitchen has a system. Your bar has a spreadsheet."<br>"The margin you are losing is not in the food. It is behind the bar."<br>"Your property runs several outlets on tools built for one restaurant."</td></tr>
+      <tr><td class="dim">Aware<br><span class="mono-sm">Solution difference</span></td><td>"Beverage depth and a full back office in one platform, not a bar tool bolted onto a food system."<br>"Built for the mid-market property, not just the enterprise or the single restaurant."<br>"Keep your accounting system. Put Craftable on top."</td></tr>
+      <tr><td class="dim">Engaged<br><span class="mono-sm">Conversion</span></td><td>"See your beverage variance on day one, not end of week."<br>"The same platform Jose Andres Group and Kimpton run."<br>"One purchasing and AP spine across every outlet you operate."</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 9. TAKEAWAYS -->
+<div class="sec">
+  <div class="secnum">09 &mdash; Takeaways</div>
+  <h2>What this means</h2>
+</div>
+<div class="card tl">
+  <ul class="list">
+    <li>The field is three camps that do not overlap: restaurant-first platforms, enterprise hotel procurement suites, and beverage point tools. The center is empty.</li>
+    <li><b>Beverage is not unclaimed, but no one pairs specialist beverage depth with a full back office.</b> That combination is Craftable's most ownable lane, and the one to lead with ahead of the AI framing the whole category shares.</li>
+    <li><b>Hotels are not unclaimed either.</b> BirchStreet and Fourth own enterprise hotel F&amp;B procurement. The modern, mid-market, beverage-aware property back office is the open lane, and naming those incumbents makes the claim credible.</li>
+    <li>Real-time visibility and AI are saturated across all three camps. Leading there is a losing hand.</li>
+    <li><b>The clearest position is the sequence:</b> beverage depth, inside a full back office, for multi-outlet mid-market hospitality, on top of the existing stack, and prescriptive. Not any single claim.</li>
+    <li>Restaurant365 is most exposed on price and ledger lock-in; the beverage tools on completeness; the hotel suites on modernity and mid-market fit; Crunchtime on chain-only orientation.</li>
+    <li>The multi-stakeholder committee Craftable already names, Operations, Finance, Technology, and Accounting, points to an account-based go-to-market, developed in the Targeting analysis.</li>
+  </ul>
+</div>
+
+</section>
+<section class="view" id="targeting">
+
+<!-- LANE -> PERSONA MAP -->
+<div class="sec">
+  <div class="secnum">00 &mdash; How the audience maps to the lanes</div>
+  <h2>Every audience serves a white-space lane</h2>
+  <p class="lede">The targeting is built backward from the open center. Each lane from the competitive analysis has an owner in this plan, so spend traces to a position, not a demographic.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th>White-space lane</th><th>Who it serves</th><th>Where it lives in this plan</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Beverage depth inside a full back office</td><td>Food &amp; Beverage and Beverage leadership</td><td class="na">ABM (account-based marketing) List A + Cold Persona 1</td></tr>
+      <tr><td class="dim">Modern, mid-market hotel and multi-outlet F&amp;B</td><td>Operations and Finance at properties</td><td class="na">ABM List B + Cold Personas 2 and 3</td></tr>
+      <tr><td class="dim">Mixed-concept complexity under one roof</td><td>Multi-unit Operations leaders</td><td class="na">ABM List C + Cold Persona 2</td></tr>
+      <tr><td class="dim">Sit on top of the stack, keep the ledger</td><td>Finance, Accounting, Technology</td><td class="na">Cold Persona 3 + technographic signal</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 1: LINKEDIN ARCHITECTURE -->
+<div class="sec">
+  <div class="secnum">01 &mdash; LinkedIn Audience Architecture</div>
+  <h2>The efficiency ladder</h2>
+  <p class="lede">Warm converts cheapest and cold converts dearest, so budget climbs the ladder from the bottom and cold only earns spend once the tiers above it prove out. The bands below are blended B2B software benchmarks from Impactable's account set, directional for a hospitality back office, not a Craftable forecast.</p>
+</div>
+
+<figure>
+  <div class="figtitle">Audience efficiency ladder</div>
+  <div class="figsub">Relative cost per lead by audience temperature &middot; lower is cheaper</div>
+  <div class="figscroll">
+  <svg viewBox="0 0 720 300" role="img" aria-label="Efficiency ladder. Warm first-party bottom-of-funnel is cheapest at 75 to 150 dollars CPL. Warm first-party mid-funnel 120 to 250. Intent and fit ABM 250 to 400. Very cold native 300 to 600 plus, the most expensive.">
+    <style>
+      .lad-lab{fill:var(--ink);font-family:var(--body);font-size:13px;font-weight:700}
+      .lad-sub{fill:var(--muted);font-family:var(--mono);font-size:10.5px}
+      .lad-cpl{fill:var(--sub);font-family:var(--mono);font-size:12px;font-weight:600}
+    </style>
+    <!-- rung 1 warm BOFU -->
+    <rect x="245" y="20" width="110" height="46" rx="6" fill="var(--teal)"/>
+    <text x="16" y="40" class="lad-lab">Warm 1P, bottom of funnel</text>
+    <text x="16" y="57" class="lad-sub">HubSpot, pricing, demo visits</text>
+    <text x="367" y="49" class="lad-cpl">$75&ndash;150 CPL</text>
+    <!-- rung 2 warm MOFU -->
+    <rect x="245" y="82" width="180" height="46" rx="6" fill="var(--blue-soft)"/>
+    <text x="16" y="102" class="lad-lab">Warm 1P, mid funnel</text>
+    <text x="16" y="119" class="lad-sub">content engagers, visits</text>
+    <text x="437" y="111" class="lad-cpl">$120&ndash;250 CPL</text>
+    <!-- rung 3 ABM -->
+    <rect x="245" y="144" width="265" height="46" rx="6" fill="var(--blue)"/>
+    <text x="16" y="164" class="lad-lab">Intent &amp; fit ABM</text>
+    <text x="16" y="181" class="lad-sub">named accounts + signals</text>
+    <text x="522" y="173" class="lad-cpl">$250&ndash;400 CPL</text>
+    <!-- rung 4 cold -->
+    <rect x="245" y="206" width="343" height="46" rx="6" fill="var(--orange)"/>
+    <text x="16" y="226" class="lad-lab">Very cold native</text>
+    <text x="16" y="243" class="lad-sub">broad title &amp; seniority</text>
+    <text x="600" y="235" class="lad-cpl">$300&ndash;600+ CPL</text>
+  </svg>
+  </div>
+  <figcaption>Benchmark bands, not Craftable numbers. The point is the order: fund the bottom of the ladder first, and let cold earn its place only after warm and ABM prove efficiency.</figcaption>
+</figure>
+
+<h3 class="tier" style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-text);margin:26px 0 4px">Tier 1 &middot; Warm audience retargeting &middot; highest priority</h3>
+<p class="lede" style="margin-top:0">The cheapest conversions Craftable already has. Every pool is filtered to the ICP (ideal customer profile) by seniority, function, and hospitality industry, and customers, employees, and competitors are suppressed. Pool sizes come from the account once access is granted; treat the sizes below as build-time confirmations, not assumptions.</p>
+
+<div class="card tt">
+  <div class="gaphead"><h3>Warm pools to build</h3><span class="badge b-md">Filter to ICP, then activate</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Website visitors</th><td>Insight Tag audiences, filtered to hospitality Operations, Finance, and Food &amp; Beverage seniority. Insight Tag installation is unconfirmed from the outside and is a week-one verification; Google Tag Manager is present on the site, so deployment is straightforward if it is not already live.</td></tr>
+    <tr><th>Company page</th><td>Page visitors and followers, same ICP filter. A standing warm pool that costs nothing to accumulate.</td></tr>
+    <tr><th>Ad engagers</th><td>Single-image and document ad clickers, plus video viewers at 50% and above. Builds during the first flight and compounds.</td></tr>
+    <tr><th>HubSpot matched audiences</th><td>Open pipeline and past demo requesters, newsletter and content engagers, and event or webinar lists, uploaded from HubSpot as Matched Audiences for bottom-of-funnel activation and nurture.</td></tr>
+    <tr><th>Customer list</th><td>Uploaded to <em>suppress</em> from all acquisition, and run separately as an expansion track (beverage-module and new-property upsell to existing accounts).</td></tr>
+    <tr><th>Suppressions</th><td>Existing customers, Craftable and FNBTech employees, named competitors, and non-hospitality firmographics, applied across every campaign.</td></tr>
+    <tr><th>Estimated sizes</th><td>Unknown from public data. Pull from the account at kickoff. Warm-first pacing below assumes these pools are healthy; if they are thin, the mix shifts toward ABM.</td></tr>
+  </tbody></table>
+  <div class="why"><b>Why first:</b> an established company on HubSpot with marquee logos and steady site traffic is sitting on warm demand that converts at a fraction of cold. Qualifying it firmographically is the fastest efficient win, so it leads.</div>
+</div>
+
+<h3 class="tier" style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-text);margin:26px 0 4px">Tier 2 &middot; ABM target accounts &middot; the spine</h3>
+<p class="lede" style="margin-top:0">The buyer universe is nameable, so this is where the motion lives. Three named-account lists, each uploaded as a Matched Audience with LinkedIn native filters layered on top, and each segmented again in retargeting by warm status, the one thing LinkedIn does that other platforms cannot.</p>
+
+<div class="card tb">
+  <div class="gaphead"><h3>List A &middot; Beverage-led multi-unit groups</h3><span class="badge b-hi">Serves the beverage lane</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Who</th><td>Bar, nightlife, and restaurant groups with serious beverage programs across several venues, where pour cost and liquor variance are a real line on the P&amp;L.</td></tr>
+    <tr><th>Source</th><td>Sales Navigator (industry: Restaurants, Food &amp; Beverage, Hospitality; multi-location; keywords bar, nightlife, lounge, hospitality group), hospitality group databases, and Craftable's own Bevager-adjacent base.</td></tr>
+    <tr><th>Person filters</th><td>Beverage Director, Bar Director, Director of Food &amp; Beverage, VP Operations, Controller.</td></tr>
+    <tr><th>Estimated size</th><td>To size on build. Expect a focused list; if tight, run entirely inside ABM rather than broadening.</td></tr>
+    <tr><th>Why this list</th><td>Directly serves the most ownable lane: beverage depth inside a full back office. These groups feel the gap the restaurant platforms leave.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>List B &middot; Mid-market hotel, resort &amp; casino F&amp;B</h3><span class="badge b-hi">Serves the property lane</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Who</th><td>Mid-market hotels, resorts, and casinos with multiple food and beverage outlets and property accounting, below the enterprise procurement tier that BirchStreet and Fourth serve. The tier where Craftable already has proof: Kimpton, Pyramid Global, CoralTree, Hotel Swexan.</td></tr>
+    <tr><th>Source</th><td>Sales Navigator (industry: Hospitality, Hotels &amp; Motels, Gambling &amp; Casinos, Leisure; mid-market headcount or property count), hotel-management-company lists, and STR-style property databases.</td></tr>
+    <tr><th>Person filters</th><td>Director of Food &amp; Beverage, Director of Operations, Corporate Controller, VP Finance, Director of Procurement.</td></tr>
+    <tr><th>Estimated size</th><td>To size on build. Property groups are countable, which is exactly why this is ABM and not cold.</td></tr>
+    <tr><th>Why this list</th><td>Serves the modern mid-market property lane, proof-backed and honestly bounded against the enterprise incumbents.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="card tb">
+  <div class="gaphead"><h3>List C &middot; Mixed-concept &amp; food-and-entertainment groups</h3><span class="badge b-md">Serves the mixed-concept lane</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Who</th><td>Groups running several concepts under one entity: a restaurant, a bar, room service, and an entertainment venue. Eatertainment and multi-outlet operators in the mold of PopStroke, resorts, and casino F&amp;B.</td></tr>
+    <tr><th>Source</th><td>Sales Navigator (multi-concept hospitality and entertainment operators), franchise and multi-unit operator databases, trade-press expansion coverage.</td></tr>
+    <tr><th>Person filters</th><td>VP or Director of Operations, Multi-Unit Operations, Corporate Controller, Director of Purchasing.</td></tr>
+    <tr><th>Estimated size</th><td>To size on build.</td></tr>
+    <tr><th>Why this list</th><td>These operators most need one purchasing and accounts-payable spine across every outlet, which no single-restaurant tool or enterprise procurement rollout gives them.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="why" style="margin-top:14px"><b>ABM retargeting, the LinkedIn edge:</b> once each list is uploaded, it is segmented again in the retargeting layer by whether the account has visited the site or engaged the ads. High-value accounts get a dedicated budget instead of getting lost in a generic pool, which is a LinkedIn-only capability worth spending against.</div>
+
+<h3 class="tier" style="font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust-text);margin:26px 0 4px">Tier 3 &middot; Selective cold personas &middot; one at a time</h3>
+<p class="lede" style="margin-top:0">Three cold personas, ranked, each mapped to a lane and run one at a time so performance is readable. If a persona builds below roughly 25K after ICP filtering, it moves into the ABM structure rather than being broadened to a comfortable number. A specialized buyer in a thin category does not owe us a cold audience.</p>
+
+<div class="card to">
+  <div class="gaphead"><h3>Cold Persona 1 &middot; Food &amp; Beverage and Beverage leadership</h3><span class="badge b-hi">Priority 1 &middot; beverage lane</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Job title keywords</th><td>Director of Food &amp; Beverage, Beverage Director, Bar Director, VP Food &amp; Beverage, F&amp;B Manager, Corporate Beverage Manager</td></tr>
+    <tr><th>Seniority</th><td>Manager, Director, VP</td></tr>
+    <tr><th>Function</th><td>Operations, Support (Food &amp; Beverage)</td></tr>
+    <tr><th>Industry</th><td>Restaurants, Food &amp; Beverage, Hospitality, Gambling &amp; Casinos</td></tr>
+    <tr><th>Company size</th><td>51&ndash;200, 201&ndash;1,000, 1,001&ndash;5,000 (multi-outlet)</td></tr>
+    <tr><th>Member skills</th><td>Beverage Management, Food &amp; Beverage, Inventory Management, Cost Control, Menu Development</td></tr>
+    <tr><th>Member groups</th><td>Hospitality F&amp;B, bar and beverage professional groups</td></tr>
+    <tr><th>Geography</th><td>United States first, key metros weighted; expand on proof</td></tr>
+    <tr><th>Exclusions</th><td>Customers, employees, competitors, single-location independents, non-hospitality</td></tr>
+    <tr><th>Estimated size</th><td>To confirm on build; likely mid-tens of thousands after filtering. If under ~25K, fold into ABM.</td></tr>
+    <tr><th>Why this persona</th><td>The clearest owner of the beverage-depth lane. This buyer runs the program where the restaurant platforms are weakest and the point tools stop at counting.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="card to">
+  <div class="gaphead"><h3>Cold Persona 2 &middot; Hospitality operations leadership</h3><span class="badge b-md">Priority 2 &middot; property &amp; mixed-concept</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Job title keywords</th><td>VP Operations, Director of Operations, Multi-Unit Operations, Regional Operations Manager, COO, Director of Restaurant Operations</td></tr>
+    <tr><th>Seniority</th><td>Director, VP, CXO</td></tr>
+    <tr><th>Function</th><td>Operations</td></tr>
+    <tr><th>Industry</th><td>Hospitality, Hotels &amp; Motels, Restaurants, Gambling &amp; Casinos, Leisure, Travel &amp; Tourism</td></tr>
+    <tr><th>Company size</th><td>201&ndash;1,000, 1,001&ndash;5,000</td></tr>
+    <tr><th>Member skills</th><td>Multi-Unit Management, Hospitality Management, Operations Management, P&amp;L Management, Food &amp; Beverage Operations</td></tr>
+    <tr><th>Member groups</th><td>Hotel and hospitality operations groups, multi-unit operator groups</td></tr>
+    <tr><th>Geography</th><td>United States first, resort and gaming metros weighted</td></tr>
+    <tr><th>Exclusions</th><td>Customers, employees, competitors, enterprise chains already standardized on BirchStreet or Fourth, non-ICP</td></tr>
+    <tr><th>Estimated size</th><td>To confirm on build; the broadest of the three, expect a workable cold pool.</td></tr>
+    <tr><th>Why this persona</th><td>Owns the property and mixed-concept lanes. This buyer carries the pain of running many outlets on tools built for one restaurant, or an enterprise suite that does not fit the mid-market.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="card to">
+  <div class="gaphead"><h3>Cold Persona 3 &middot; Hospitality finance &amp; accounting</h3><span class="badge b-md">Priority 3 &middot; sits-on-top lane</span></div>
+  <table class="ftable"><tbody>
+    <tr><th>Job title keywords</th><td>CFO, Controller, Corporate Controller, VP Finance, Director of Accounting, Director of Finance, AP Manager</td></tr>
+    <tr><th>Seniority</th><td>Director, VP, CXO</td></tr>
+    <tr><th>Function</th><td>Finance, Accounting</td></tr>
+    <tr><th>Industry</th><td>Hospitality, Hotels &amp; Motels, Restaurants, Gambling &amp; Casinos</td></tr>
+    <tr><th>Company size</th><td>201&ndash;1,000, 1,001&ndash;5,000</td></tr>
+    <tr><th>Member skills</th><td>Financial Reporting, Accounts Payable, Hospitality Finance, Cost Accounting, ERP</td></tr>
+    <tr><th>Member groups</th><td>Hospitality finance and controller groups</td></tr>
+    <tr><th>Geography</th><td>United States first</td></tr>
+    <tr><th>Exclusions</th><td>Customers, employees, competitors, non-hospitality finance</td></tr>
+    <tr><th>Estimated size</th><td>To confirm on build; narrower, high-value. Pair with the technographic accounting signal below.</td></tr>
+    <tr><th>Why this persona</th><td>The decision seat for the sit-on-top lane. This buyer will not rip out a working ledger, and the message is keep your accounting system and layer Craftable on top through the existing integrations.</td></tr>
+  </tbody></table>
+</div>
+
+<div class="center-callout dark-panel">
+  <div class="k">Budget framework</div>
+  <p style="font-family:var(--body);font-style:normal;font-size:16px;line-height:1.6">Warm-first split, contingent on healthy warm pools: 60% warm and retargeting, 25% ABM, 15% cold test. If Insight Tag is not yet live or the warm pools are thin, shift toward an ABM-led split nearer 40 / 35 / 25 while the warm pools fill. Audience Expansion off, LinkedIn Audience Network off, every warm pool filtered to ICP, customers and employees and competitors suppressed. Under a 3 to 5 thousand per month test: one channel, one audience, do not split. The exact budget is unconfirmed and the split flexes to it and to verified pool sizes.</p>
+</div>
+
+<!-- SECTION 2: SIGNALS -->
+<div class="sec">
+  <div class="secnum">02 &mdash; Third-Party Fit &amp; Intent Signals</div>
+  <h2>The enrichment layer</h2>
+  <p class="lede">Signals that raise a target account above a plain firmographic match. Combine the top two or three into a scored list in Clay, then upload it to LinkedIn as a Matched Audience so spend concentrates on accounts showing fit and timing.</p>
+</div>
+<div class="grid2">
+  <div class="card tt">
+    <div class="k">Technographic</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">POS, accounting &amp; incumbent back office</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">POS in use (Toast, Oracle Simphony/Micros, Square for Restaurants, Aloha), accounting (QuickBooks, Sage Intacct, M3 for hotels), and any incumbent back-office tool (Restaurant365, MarginEdge, WISK). Indicates fit and whether the play is sit-on-top or replace-a-point-tool. Source: BuiltWith, HG Insights, Clay.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Hiring</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">Roles that signal back-office strain</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">Openings for F&amp;B Controller, Purchasing or Procurement Manager, multi-unit Operations, or a new corporate Controller. Indicates active investment in the cost-control problem. Source: LinkedIn Jobs, Clay job scrapers.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Expansion &amp; openings</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">New venues and properties</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">Groups opening new outlets or properties, or adding a concept. New units break spreadsheet-and-single-tool setups, which is the moment a back-office decision opens. Source: Nation's Restaurant News, hospitality trades, permit and news feeds.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Funding, PE &amp; M&amp;A</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">Capital for systems</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">Hospitality groups that recently raised or were acquired by private equity, the way Gauge Capital backs Craftable. Fresh capital plus a mandate to standardize operations opens vendor selection. Source: PE and deal databases, trade press.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Intent</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">In-market topic surges</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">Topic surges for restaurant management software, inventory management, bar or beverage inventory, and hospitality procurement. Indicates an account researching now. Source: G2 Buyer Intent, 6sense, Bombora.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Event</div>
+    <h3 style="margin:6px 0 4px;font-size:16px">Where the buyers concentrate</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--sub)">National Restaurant Association Show, Bar &amp; Restaurant Expo, HITEC and The Hospitality Show for hotel tech, and MURTEC. Attendee and sponsor lists concentrate F&amp;B, operations, and finance buyers. Source: event attendee and exhibitor lists.</p>
+  </div>
+</div>
+<div class="why" style="margin-top:14px"><b>Clay workflow:</b> build a scored account list combining the two or three signals that matter most for a given push, for example mid-market hospitality plus a serious beverage program plus a POS like Toast or Simphony and no modern back office detected, then upload the top-scoring accounts to LinkedIn as a Matched Audience and layer the person-level filters on top.</div>
+
+<!-- SECTION 3: KEYWORDS -->
+<div class="sec">
+  <div class="secnum">03 &mdash; Paid Search Keyword Map</div>
+  <h2>High-intent capture on Google</h2>
+  <p class="lede">Google's job here is capturing buyers already searching, not creating demand. Unlike a brand-new category, restaurant and bar back-office terms are established and commercially contested, so this is a real capture lane. Exact volumes are a Keyword Planner pull in week one; the clusters and intent tiers below are the architecture that pull refines.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th>Keyword cluster</th><th>Intent</th><th>Buyer signal</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">restaurant inventory software / restaurant management software</td><td><span class="badge b-hi">High</span></td><td>Actively evaluating a platform</td><td>Core category. Phrase and exact match.</td></tr>
+      <tr><td class="dim">bar inventory software / beverage inventory software</td><td><span class="badge b-hi">High</span></td><td>Beverage-program buyer, the lead lane</td><td>Route to a beverage-led landing page.</td></tr>
+      <tr><td class="dim">food cost software / recipe costing software</td><td><span class="badge b-hi">High</span></td><td>Cost-control pain, in market</td><td>Maps to the daily-cost message.</td></tr>
+      <tr><td class="dim">restaurant accounting software / restaurant AP automation</td><td><span class="badge b-hi">High</span></td><td>Finance buyer, evaluating</td><td>Pair with the sits-on-top message.</td></tr>
+      <tr><td class="dim">hotel F&amp;B inventory / hospitality procurement software</td><td><span class="badge b-hi">High</span></td><td>Property F&amp;B buyer</td><td>Thinner volume, high value. Verify.</td></tr>
+      <tr><td class="dim">multi-location / multi-unit restaurant software</td><td><span class="badge b-hi">High</span></td><td>Multi-outlet operator</td><td>Aligns to the mixed-concept lane.</td></tr>
+      <tr><td class="dim">Restaurant365 alternative / MarginEdge alternative</td><td><span class="badge b-hi">High</span></td><td>In an active switch evaluation</td><td>Competitor conquest. Exact match, separate budget.</td></tr>
+      <tr><td class="dim">MarketMan alternative / WISK alternative / BirchStreet alternative</td><td><span class="badge b-hi">High</span></td><td>Comparing named alternatives</td><td>Conquest on clean names only.</td></tr>
+      <tr><td class="dim">Craftable / Bevager / Foodager</td><td><span class="badge b-hi">High</span></td><td>Brand and legacy-product search</td><td>Brand defense, roughly 10% of budget.</td></tr>
+      <tr><td class="dim">how to reduce food cost / control pour cost</td><td><span class="badge b-md">Medium</span></td><td>Problem-aware, not yet shopping</td><td>Capped test, route to content.</td></tr>
+      <tr><td class="dim">R365 vs MarginEdge / best restaurant inventory software</td><td><span class="badge b-md">Medium</span></td><td>Comparison research</td><td>Comparison content, softer CTA.</td></tr>
+      <tr><td class="dim">restaurant inventory best practices</td><td><span class="badge b-md">Medium</span></td><td>Early research</td><td>Content and retargeting seed.</td></tr>
+      <tr><td class="dim">what is food cost percentage / how to take bar inventory</td><td><span class="badge b-lo">Low</span></td><td>Education, minimal buying intent</td><td>Content only. Not a conversion line.</td></tr>
+      <tr><td class="dim">restaurant P&amp;L template / free inventory spreadsheet</td><td><span class="badge b-lo">Low</span></td><td>Freeware seeker</td><td>Exclude or content-only. Low fit.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="why"><b>Launch set:</b> start with brand defense (Craftable, Bevager), the two strongest category terms (restaurant inventory software, bar inventory software), one finance term (restaurant accounting software), and one or two clean conquest terms (Restaurant365 alternative, MarginEdge alternative). Everything else phases in after capture is stable. Estimated spend confirmed once volumes are pulled.</div>
+<div class="card tr" style="margin-top:16px">
+  <div class="k">Negative keywords</div>
+  <ul class="list" style="margin-top:8px">
+    <li><b>jobs, salary, careers</b> &mdash; job seekers, not buyers.</li>
+    <li><b>free, template, spreadsheet</b> &mdash; freeware intent, low fit and low value.</li>
+    <li><b>course, training, certification, class</b> &mdash; education, not purchase.</li>
+    <li><b>recipes, menu ideas</b> &mdash; consumer and culinary, not back office.</li>
+    <li><b>reservation, table booking, POS system</b> &mdash; adjacent categories Craftable integrates with rather than replaces.</li>
+    <li><b>Fourth, Crunchtime as broad terms</b> &mdash; generic English words that pull unrelated traffic; only run these as tightly scoped exact-match if at all.</li>
+  </ul>
+</div>
+
+<div class="sec">
+  <div class="secnum">04 &mdash; Determination</div>
+  <h2>Warm-first, account-based</h2>
+</div>
+<div class="card tl">
+  <ul class="list">
+    <li><b>Start warm, contingent on the pools.</b> An established company on HubSpot with marquee logos and site traffic points to a warm-first 60 / 25 / 15 split. Confirm Insight Tag installation and pool sizes at kickoff; if thin, shift toward ABM-led.</li>
+    <li><b>ABM is the spine.</b> The buyer universe, mid-market hospitality groups and properties, is finite and nameable, which is the definition of an account-based motion rather than broad cold spray.</li>
+    <li><b>Primary persona is Food &amp; Beverage leadership.</b> It owns the most defensible lane and gives the sharpest first cold test.</li>
+    <li><b>Google captures, LinkedIn qualifies.</b> Established category search means Google is a genuine capture and conquest lane, feeding the same LinkedIn retargeting pools that qualify and convert.</li>
+    <li><b>Open verifications:</b> Insight Tag status, warm pool sizes, exact keyword volumes, and the monthly budget. Each is flagged rather than assumed, and each is a fast week-one confirmation.</li>
+  </ul>
+</div>
+
+</section>
+<section class="view" id="ecosystem">
+  <div class="sec" style="margin-top:26px">
+    <div class="secnum">Ecosystem &mdash; The Growth System Board</div>
+    <h2>The whole system, on one board</h2>
+    <p class="lede">Every motion Impactable runs, mapped for Craftable and read forward. Nothing here grades current execution. Each motion carries where it sits in the plan, what starts now with the recommended package, what gets built during the engagement, and what is sequenced for later, plus who owns it.</p>
+  </div>
+  <div class="grid2" style="margin-bottom:6px">
+    <div class="card"><div class="k">How to read the board</div>
+      <p style="margin:8px 0 0;font-size:13.5px;color:var(--sub)"><span class="badge b-start">Start</span> turn on now, in The Full Motion. &nbsp; <span class="badge b-build">Build</span> stood up during the engagement. &nbsp; <span class="badge b-later">Later</span> sequenced for Accelerated Scale.</p>
+    </div>
+    <div class="card"><div class="k">Who owns it</div>
+      <p style="margin:8px 0 0;font-size:13.5px;color:var(--sub)"><span class="owner" style="margin:0">IMP</span> Impactable runs it as part of the pod. &nbsp; <span class="owner" style="margin:0">Craftable</span> Craftable owns the asset, we direct and amplify.</p>
+    </div>
+  </div>
+
+  <figure style="margin:8px 0 16px">
+    <div class="figtitle">The plan at a glance</div>
+    <div class="figsub">All twenty-two motions, by phase</div>
+    <div class="figscroll"><svg viewBox="0 0 680 132" role="img" aria-label="A stacked bar of twenty-two motions: thirteen start now, seven build during the engagement, two are sequenced for later." style="width:100%;height:auto;min-width:520px">
+      <style>
+        .ecn{font-family:var(--display);font-size:22px}
+        .ecl{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+      </style>
+      <text class="ecn" x="217.25" y="34" text-anchor="middle" fill="var(--lime-text)">13</text>
+      <text class="ecn" x="489.95" y="34" text-anchor="middle" fill="var(--blue-text)">7</text>
+      <text class="ecn" x="612.6999999999999" y="34" text-anchor="middle" fill="var(--muted)">2</text>
+      <rect x="40" y="46" width="354.5" height="26" rx="5" fill="var(--lime)"/>
+      <rect x="394.5" y="46" width="190.9" height="26" rx="5" fill="var(--blue)"/>
+      <rect x="585.4" y="46" width="54.599999999999994" height="26" rx="5" fill="var(--muted)"/>
+      <text class="ecl" x="217.25" y="94" text-anchor="middle" fill="var(--lime-text)">Start now</text>
+      <text class="ecl" x="489.95" y="94" text-anchor="middle" fill="var(--blue-text)">Build during</text>
+      <text class="ecl" x="612.6999999999999" y="94" text-anchor="middle" fill="var(--muted)">Later</text>
+    </svg></div>
+    <figcaption>Thirteen of the twenty-two motions sit in the recommended start, because the content, warm audiences, and live tracking are already here. Build and later are the earned expansion, not prerequisites.</figcaption>
+  </figure>
+  <div class="clusterhead"><span class="cc" style="background:var(--lime)"></span> Create &mdash; make demand exist before anyone is searching</div>
+  <div class="mgrid">
+    <div class="card tl"><div class="mtop"><span class="mlabel">C1</span><span class="badge b-start">Start</span><span class="owner">Craftable</span></div><b>SEO and content foundation</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Healthy organic already ranks for brand and Bevager. We align it to the open lanes and amplify, no build from zero.</p></div>
+    <div class="card tl"><div class="mtop"><span class="mlabel">C2</span><span class="badge b-start">Start</span><span class="owner">Craftable + IMP</span></div><b>Founder and expert thought leadership</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">David Cantu's voice and 6.9K following turned into a consistent practitioner cadence. The heart of the motion.</p></div>
+    <div class="card tl"><div class="mtop"><span class="mlabel">C3</span><span class="badge b-start">Start</span><span class="owner">IMP + Craftable</span></div><b>Organic distribution depth</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Personal profile, company page, YouTube, newsletter, and blog run as one distribution engine.</p></div>
+    <div class="card tl"><div class="mtop"><span class="mlabel">C4</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Thought leader amplification</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Paid amplification of the best-performing posts to the hospitality buying committee.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--rust)"></span> Capture &mdash; catch the operators already searching</div>
+  <div class="mgrid">
+    <div class="card tr"><div class="mtop"><span class="mlabel">C5</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Brand defense search</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Protect Craftable, Bevager, and Foodager terms. The cheapest, highest-intent clicks available, and unprotected today.</p></div>
+    <div class="card tr"><div class="mtop"><span class="mlabel">C6</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Core and solution paid search</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Capture operators searching for inventory, food cost, and accounting software. Wide open, since Craftable runs no paid search today.</p></div>
+    <div class="card tr"><div class="mtop"><span class="mlabel">C7</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Competitor conquest search</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Clean competitor names where comparison intent is already live in the category.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--blue)"></span> LinkedIn engine &mdash; qualify and nurture the named universe</div>
+  <div class="mgrid">
+    <div class="card tb"><div class="mtop"><span class="mlabel">C8</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>LinkedIn retargeting</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Filter site and follower traffic to the hospitality committee and re-engage the most-fit accounts.</p></div>
+    <div class="card tb"><div class="mtop"><span class="mlabel">C9</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>LinkedIn ABM and cold</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Three named-account lists lead. Cold personas open at Accelerated Scale, one at a time.</p></div>
+    <div class="card tb"><div class="mtop"><span class="mlabel">C10</span><span class="badge b-build">Build</span><span class="owner">IMP</span></div><b>Bottom-of-funnel conversion</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Acceleration to accounts already showing repeat engagement, stood up in month two.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--teal)"></span> Connect &mdash; turn attention into named, scored accounts</div>
+  <div class="mgrid">
+    <div class="card tt"><div class="mtop"><span class="mlabel">C11</span><span class="badge b-start">Start</span><span class="owner">IMP + Craftable</span></div><b>Conversion tracking infrastructure</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Insight Tag, GA4, and HubSpot are already live. Add CAPI and offline-conversion upload at Scale to attach revenue.</p></div>
+    <div class="card tt"><div class="mtop"><span class="mlabel">C12</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Website visitor ID</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Name the companies and people on the site, tied into the account view.</p></div>
+    <div class="card tt"><div class="mtop"><span class="mlabel">C13</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Account intelligence and HubSpot sync</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">DemandSense composes five signal pools into one account view, synced to HubSpot deals and pipeline.</p></div>
+    <div class="card tt"><div class="mtop"><span class="mlabel">C14</span><span class="badge b-build">Build</span><span class="owner">IMP</span></div><b>Enrichment and owned-audience building</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Enrich the named universe and build owned lists for activation and suppression.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--orange)"></span> Activate &mdash; routed reach, gated on Connect</div>
+  <div class="mgrid">
+    <div class="card to"><div class="mtop"><span class="mlabel">C15</span><span class="badge b-later">Later</span><span class="owner">IMP</span></div><b>Meta B2B</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Reach the enriched pool at a fraction of the CPM, once the core proves. Sequenced for Scale.</p></div>
+    <div class="card to"><div class="mtop"><span class="mlabel">C16</span><span class="badge b-later">Later</span><span class="owner">IMP</span></div><b>Programmatic</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Account-based air cover across display, native, and CTV for under-served accounts.</p></div>
+    <div class="card to"><div class="mtop"><span class="mlabel">C17</span><span class="badge b-build">Build</span><span class="owner">IMP + Craftable</span></div><b>Email and outreach activation</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Signal-triggered outreach to engaged and hidden-pipeline accounts as they surface.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--blue-soft)"></span> Convert &mdash; turn warm accounts into pipeline</div>
+  <div class="mgrid">
+    <div class="card tb"><div class="mtop"><span class="mlabel">C18</span><span class="badge b-build">Build</span><span class="owner">IMP + Craftable</span></div><b>Landing pages and CRO</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Dedicated pages for the highest-intent capture and the ABM entry points.</p></div>
+    <div class="card tb"><div class="mtop"><span class="mlabel">C19</span><span class="badge b-build">Build</span><span class="owner">IMP + Craftable</span></div><b>Offer architecture</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Sharpen the demo and next-step offers to each buyer across the committee.</p></div>
+    <div class="card tb"><div class="mtop"><span class="mlabel">C20</span><span class="badge b-build">Build</span><span class="owner">Craftable + IMP</span></div><b>Sales activation loop</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Hand scored and hidden-pipeline accounts to sales with the context to act.</p></div>
+  </div>
+
+  <div class="clusterhead"><span class="cc" style="background:var(--yellow)"></span> Compound &mdash; the system gets sharper every quarter</div>
+  <div class="mgrid">
+    <div class="card tl"><div class="mtop"><span class="mlabel">C21</span><span class="badge b-start">Start</span><span class="owner">IMP</span></div><b>Diagnostics and EBR cadence</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">Quarterly Impact Report from day one, moving to a board-grade EBR at Scale.</p></div>
+    <div class="card tl"><div class="mtop"><span class="mlabel">C22</span><span class="badge b-build">Build</span><span class="owner">IMP</span></div><b>Experimentation program</b><p style="margin:5px 0 0;font-size:13.5px;color:var(--sub)">One named test per cycle, feeding results back into targeting and messaging.</p></div>
+  </div>
+
+  <div class="why" style="margin-top:20px"><b>Read for Craftable:</b> the Start column is dense because the foundation is already here. Content, warm audiences, and live tracking mean most of Create and Connect can turn on immediately. The build and later columns are the earned expansion, not prerequisites.</div>
+</section>
+<section class="view" id="howitworks">
+
+<div class="sec">
+  <div class="secnum">01 &mdash; The Layers</div>
+  <h2>What each layer does in this account</h2>
+  <p class="lede">Six layers, each with one job specific to Craftable, sequenced so each makes the next cheaper. Not a menu of channels to pick from, a motion with an order.</p>
+</div>
+
+<div class="card tl">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--lime-text)">Create</span><h3>Company content and thought leadership</h3><span class="chantags">awareness &middot; owned</span></div>
+  <p>Build awareness among the property and mixed-concept operators who are not searching yet. Practitioner content on beverage cost control, running a multi-outlet back office, and sitting on top of the existing stack, distributed across CEO David Cantu's personal profile, the company page, YouTube, a newsletter, and the blog, amplifying a voice and a following that already exist. The cheapest reach in the system and the fuel every other layer runs on.</p>
+  <div class="why"><b>Job in this account:</b> create the demand Google cannot capture, and feed the retargeting pool for buyers who never type a search query.</div>
+</div>
+
+<div class="card tb">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--blue-text)">Connect</span><h3>LinkedIn retargeting and ABM (account-based marketing), the hub</h3><span class="chantags">qualify &middot; account-based</span></div>
+  <p>Qualify site and Google traffic firmographically by seniority, function, and hospitality industry, run the three named-account lists (beverage-led groups, mid-market property F&amp;B, mixed-concept operators), and read engagement off every other channel. The Insight Tag is already live and the company page carries roughly 11,000 followers, so the warm pool is ready on day one. The only layer that can filter traffic before spend, which is why it is the hub rather than one spoke among many.</p>
+  <div class="why"><b>Job in this account:</b> qualify the traffic the other layers create and capture, and carry the account-based motion against a finite, nameable universe.</div>
+</div>
+
+<div class="card tt">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--teal-text)">Capture</span><h3>Google paid search</h3><span class="chantags">in-market &middot; conquest</span></div>
+  <p>Win the operators already searching for restaurant and bar inventory, food cost, and accounting software; defend the Craftable, Bevager, and Foodager brand terms; and conquest the clean competitor names. The category is established and contested, and Craftable runs no paid search today, so this is a wide-open capture lane, not a token spend. Every captured visit becomes a LinkedIn retargeting audience.</p>
+  <div class="why"><b>Job in this account:</b> harvest the demand that already exists today and hand it to LinkedIn to qualify.</div>
+</div>
+
+<div class="card to">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--rust-text)">Extend</span><h3>Meta and programmatic, later</h3><span class="chantags">scale &middot; post day-90</span></div>
+  <p>Once LinkedIn has qualified a pool, reach the same enriched accounts at a fraction of the CPM, and give under-served named accounts account-based air cover across display and native. These inherit a qualified audience; they cannot build one, so they are parked until the two-channel core proves out. Adding them earlier would dilute, not scale.</p>
+  <div class="why"><b>Job in this account:</b> scale reach against an already-qualified pool, once there is one worth extending.</div>
+</div>
+
+<div class="card tt">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--teal-text)">Activate</span><h3>LinkedIn and email outreach</h3><span class="chantags">signal &middot; handoff</span></div>
+  <p>Turn signal into conversations. Engaged named accounts and hidden-pipeline accounts, the ones showing heavy engagement with no deal record, are handed to sales and nurture the moment the signal says ready, rather than on a time-based drip.</p>
+  <div class="why"><b>Job in this account:</b> convert account-level signal into booked conversations for a lean go-to-market team.</div>
+</div>
+
+<div class="card tl">
+  <div class="chanhead"><span class="chanlabel" style="color:var(--lime-text)">Intelligence</span><h3>DemandSense, Web ID, and HubSpot sync</h3><span class="chantags">the layer underneath</span></div>
+  <p>The layer under all of it. Five signal pools, HubSpot, LinkedIn paid, LinkedIn organic, companies on the site, and people on the site, composed into one account view; named companies and people on the site through Web ID; and the HubSpot connection that ties ad activity to influenced pipeline.</p>
+  <div class="why"><b>Job in this account:</b> make the whole motion measurable as pipeline, and tell every other layer where to spend next.</div>
+</div>
+
+<div class="sec">
+  <div class="secnum">02 &mdash; The Order</div>
+  <h2>Why the sequence is the strategy</h2>
+  <p class="lede">Run out of order and the same channels cost more and prove less. Budget climbs only as each layer earns the next.</p>
+</div>
+<figure>
+  <div class="figtitle">The motion, in order</div>
+  <div class="figsub">Each layer lowers the cost of the one after it</div>
+  <div class="figscroll">
+  <svg viewBox="0 0 720 240" role="img" aria-label="Sequence: warm retargeting and Google capture start together in parallel, then LinkedIn ABM, then cold personas one at a time, then after day 90 Meta and programmatic extend, with content creating demand throughout and activation running on signal.">
+    <style>
+      .flab{fill:#071A38;font-family:var(--body);font-size:13px;font-weight:700}
+      .fsub{fill:rgba(7,26,56,.72);font-family:var(--mono);font-size:10px}
+      .fnum{fill:var(--navy);font-family:var(--mono);font-size:12px;font-weight:700}
+      [data-theme="dark"] .fnum{fill:#001122}
+    </style>
+    <!-- content band across the top -->
+    <rect x="16" y="18" width="688" height="34" rx="8" fill="var(--lime)" opacity="0.9"/>
+    <text x="30" y="39" class="fnum">Create: company content runs throughout, feeding every pool</text>
+    <!-- step boxes -->
+    <rect x="16" y="70" width="150" height="52" rx="8" fill="var(--teal)"/>
+    <text x="26" y="92" class="flab">Warm + Google</text>
+    <text x="26" y="108" class="fsub">parallel, day 1</text>
+    <rect x="182" y="70" width="150" height="52" rx="8" fill="var(--blue)"/>
+    <text x="192" y="92" class="flab">LinkedIn ABM</text>
+    <text x="192" y="108" class="fsub">named accounts</text>
+    <rect x="348" y="70" width="150" height="52" rx="8" fill="var(--blue-soft)"/>
+    <text x="358" y="92" class="flab">Cold personas</text>
+    <text x="358" y="108" class="fsub">one at a time</text>
+    <rect x="514" y="70" width="190" height="52" rx="8" fill="var(--orange)"/>
+    <text x="524" y="92" class="flab">Meta + programmatic</text>
+    <text x="524" y="108" class="fsub">after day 90</text>
+    <!-- arrows -->
+    <text x="172" y="102" class="flab" style="fill:var(--muted)">&rarr;</text>
+    <text x="338" y="102" class="flab" style="fill:var(--muted)">&rarr;</text>
+    <text x="504" y="102" class="flab" style="fill:var(--muted)">&rarr;</text>
+    <!-- activate band -->
+    <rect x="16" y="140" width="688" height="34" rx="8" fill="var(--teal-dark)" opacity="0.85"/>
+    <text x="30" y="161" class="fnum" style="fill:#F4F1EA">Activate: engaged and hidden-pipeline accounts handed to sales on signal, throughout</text>
+    <!-- intelligence band -->
+    <rect x="16" y="186" width="688" height="34" rx="8" fill="var(--navy)"/>
+    <text x="30" y="207" class="fnum" style="fill:#F4F1EA">Intelligence: DemandSense composes all of it into one account view, feeding influenced pipeline</text>
+  </svg>
+  </div>
+  <figcaption>Warm retargeting and Google capture start together because each makes the other work. Cold and the extend layer earn their place only after the core proves out. A strategic read of sequence, not a fixed calendar.</figcaption>
+</figure>
+
+<div class="sec">
+  <div class="secnum">03 &mdash; The Signal Layer</div>
+  <h2>Five pools, one account view</h2>
+  <p class="lede">Most agencies rent a dashboard. Craftable's motion runs on DemandSense, which composes five signal pools into one account-level view and acts on it. This is Impactable's own software, noted plainly.</p>
+</div>
+<figure>
+  <div class="figtitle">Five signal pools compose into one view</div>
+  <div class="figscroll">
+  <svg viewBox="0 0 720 260" role="img" aria-label="Five inputs, HubSpot, LinkedIn paid, LinkedIn organic, companies on site, and people on site, converge into one DemandSense account view that outputs a coverage waterfall, hidden pipeline, a waste map, and Web ID.">
+    <style>
+      .pin{fill:var(--card);stroke:var(--line);stroke-width:1}
+      .ptxt{fill:#F4F1EA;font-family:var(--body);font-size:12px;font-weight:600}
+      .hub{fill:var(--blue)}
+      .hubtxt{fill:#001122;font-family:var(--body);font-size:14px;font-weight:800}
+      .conn{stroke:var(--line);stroke-width:1.5;fill:none}
+      .otxt{fill:var(--sub);font-family:var(--mono);font-size:10.5px}
+    </style>
+    <line x1="185" y1="34" x2="330" y2="120" class="conn"/>
+    <line x1="185" y1="80" x2="330" y2="122" class="conn"/>
+    <line x1="185" y1="126" x2="330" y2="126" class="conn"/>
+    <line x1="185" y1="172" x2="330" y2="130" class="conn"/>
+    <line x1="185" y1="218" x2="330" y2="132" class="conn"/>
+    <rect x="16" y="18" width="170" height="32" rx="6" class="pin"/><text x="30" y="38" class="ptxt">HubSpot</text>
+    <rect x="16" y="64" width="170" height="32" rx="6" class="pin"/><text x="30" y="84" class="ptxt">LinkedIn paid</text>
+    <rect x="16" y="110" width="170" height="32" rx="6" class="pin"/><text x="30" y="130" class="ptxt">LinkedIn organic</text>
+    <rect x="16" y="156" width="170" height="32" rx="6" class="pin"/><text x="30" y="176" class="ptxt">Companies on site</text>
+    <rect x="16" y="202" width="170" height="32" rx="6" class="pin"/><text x="30" y="222" class="ptxt">People on site</text>
+    <rect x="330" y="96" width="170" height="64" rx="10" class="hub"/><text x="352" y="133" class="hubtxt">DemandSense</text>
+    <line x1="500" y1="112" x2="560" y2="60" class="conn"/>
+    <line x1="500" y1="122" x2="560" y2="110" class="conn"/>
+    <line x1="500" y1="134" x2="560" y2="160" class="conn"/>
+    <line x1="500" y1="144" x2="560" y2="210" class="conn"/>
+    <text x="560" y="64" class="otxt">Coverage waterfall</text>
+    <text x="560" y="114" class="otxt">Hidden pipeline</text>
+    <text x="560" y="164" class="otxt">Waste map</text>
+    <text x="560" y="214" class="otxt">Web ID: named accounts</text>
+  </svg>
+  </div>
+  <figcaption>DemandSense and Web ID are Impactable's own software. The point is not another dashboard, it is one account-level view that tells the motion where to spend next.</figcaption>
+</figure>
+
+<div class="sec">
+  <div class="secnum">04 &mdash; Influenced Revenue</div>
+  <h2>Because Craftable runs HubSpot, this ties to pipeline</h2>
+  <p class="lede">Campaign Manager reports impressions and clicks and cannot see HubSpot, so on its own it cannot answer whether LinkedIn brought any deals. Authorize HubSpot once and that changes.</p>
+</div>
+<div class="grid2">
+  <div class="card tb">
+    <div class="k">What it produces</div>
+    <ul class="list">
+      <li><b>Influenced pipeline, closed-won and closed-lost</b> in one view, for deals where the account had meaningful ad activity before the deal was created. Craftable chooses what counts and sets the window to its real sales cycle.</li>
+      <li><b>A campaign influence score</b> for scale-or-cut decisions, and which audiences produce pipeline versus only clicks, split by industry, headcount, and geography.</li>
+      <li><b>Account-level journeys</b> tying anonymous site visits back to named companies and then to the deal record.</li>
+    </ul>
+  </div>
+  <div class="card tl">
+    <div class="k">The feature to demo</div>
+    <p style="margin:6px 0 0"><b>Hidden pipeline.</b> Accounts with heavy ad engagement and no deal record at all, surfaced automatically and exportable to sales, nurture, or outreach. For a lean go-to-market team this is often the most useful list in the system.</p>
+    <div class="why"><b>Honest caveat:</b> reporting is only as good as the conversion capture underneath it, so events are defined and verified in week one before anything spends.</div>
+  </div>
+</div>
+<div class="video">
+  <div class="k" style="margin-bottom:8px">Walkthrough: influenced revenue in DemandSense</div>
+  <div class="videowrap">
+    <iframe src="https://www.youtube-nocookie.com/embed/7Pqs4jgyZA4" title="DemandSense influenced revenue walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="secnum">05 &mdash; Measurement</div>
+  <h2>What we report, and what we will not promise</h2>
+  <p class="lede">Reporting the board asks for, by layer, and an honest line on the limits so the numbers mean something.</p>
+</div>
+<div class="tblwrap">
+  <table class="grid">
+    <thead><tr><th>Layer</th><th>What we report</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Create</td><td>Reach, engaged accounts, warm-pool growth, view-through engagement. Leading indicators, judged over weeks.</td></tr>
+      <tr><td class="dim">Connect (LinkedIn)</td><td>Qualified engagement, engaged ICP (ideal customer profile) accounts, account penetration, cost per lead by warm, ABM, and cold tier.</td></tr>
+      <tr><td class="dim">Capture (Google)</td><td>Qualified clicks by brand, non-brand, and conquest; cost per qualified visit; demo requests.</td></tr>
+      <tr><td class="dim">Intelligence</td><td>Coverage waterfall, influenced pipeline and closed-won, campaign influence score, hidden-pipeline list, waste map.</td></tr>
+      <tr><td class="dim">Activate</td><td>Engaged-account to outreach handoffs and meetings booked.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="card tr" style="margin-top:16px">
+  <div class="k">What we will not promise</div>
+  <ul class="list">
+    <li><b>Full econometric marketing-mix modeling.</b> That is a specialist, usually in-house discipline. We attach revenue through CAPI and offline-conversion upload and report influenced pipeline honestly; we do not claim it.</li>
+    <li><b>Guaranteed volume on thin terms.</b> Property and hotel-procurement search is thinner than the core restaurant terms, so we capture it cheaply where it exists and create the rest through content.</li>
+    <li><b>Fast pipeline on a committee sale.</b> Mid-market property deals move through several stakeholders on a longer cycle, so account penetration, persona reach, and repeat engagement are the leading indicators reported while pipeline forms.</li>
+    <li><b>Vanity lead volume.</b> We will not optimize to cheap leads from low-intent education keywords that never become pipeline.</li>
+  </ul>
+</div>
+
+</section>
+<section class="view" id="paths">
+
+<!-- FIT ASSESSMENT -->
+<div class="sec">
+  <div class="secnum">01 &mdash; Where We Fit</div>
+  <h2>Why this motion suits Craftable specifically</h2>
+  <p class="lede">Not every company is set up for this. Craftable is, and the reasons are concrete.</p>
+</div>
+<div class="grid2">
+  <div class="card tl">
+    <div class="k">The thought-leadership engine has fuel</div>
+    <p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">A company page with roughly 11,000 followers, CEO David Cantu with a credible personal voice and his own following, and a healthy organic content footprint already ranking. The create layer does not need a discovery phase; the expertise and the audience are already here to amplify across personal, company, YouTube, newsletter, and blog.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">Warm traffic is ready to activate</div>
+    <p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">The LinkedIn Insight Tag, GA4, and Google Tag Manager are already live on the site, so retargeting can start on day one against real traffic and the follower base, filtered to the hospitality buying committee. No instrumentation project stands between here and the first efficient conversions.</p>
+  </div>
+  <div class="card tb">
+    <div class="k">HubSpot makes revenue reporting real</div>
+    <p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">Craftable runs HubSpot. Synced to DemandSense, ad exposure traces through site visits and deal stages to closed revenue, so reporting is influenced pipeline and closed-won in HubSpot, not clicks. Hidden pipeline, accounts engaging with no deal record yet, gets surfaced for the team automatically.</p>
+  </div>
+  <div class="card tt">
+    <div class="k">The buyer universe is nameable</div>
+    <p style="margin:6px 0 0;font-size:14.5px;color:var(--sub)">Mid-market beverage-led groups, hotels, resorts, casinos, and mixed-concept operators are a finite, listable set with a multi-stakeholder committee. That is an account-based (ABM) motion by definition, and Google search capture is a wide-open lane, since the category is actively searched and Craftable runs no paid search today.</p>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<div class="sec">
+  <div class="secnum">02 &mdash; The Packages</div>
+  <h2>Start small, climb as it proves out</h2>
+  <p class="lede">Three scoped options built from the same motion, mapped to how Impactable prices managed work. Fees below are indicative and anchored to the current published ladder; the exact rate, including the thought-leadership production tier, is set on the scoping call. Management fee is always separate from ad spend.</p>
+</div>
+<div class="pgrid">
+<table class="pmatrix">
+  <thead>
+    <tr>
+      <th class="rowlab"></th>
+      <th class="pcolhead">
+        <div class="pname">Warm-Traffic Activation</div>
+        <div class="pprice">from $3,000</div><div class="pper">/mo management &middot; anchors to Core</div>
+        <div class="pspend">Up to $15k/mo ad spend</div>
+      </th>
+      <th class="pcolhead ppinned">
+        <div class="ppill">Recommended for Craftable</div>
+        <div class="pname">The Full Motion</div>
+        <div class="pprice">from $4,500</div><div class="pper">/mo management &middot; anchors to Growth</div>
+        <div class="pspend">Up to $25k/mo combined spend</div>
+      </th>
+      <th class="pcolhead">
+        <div class="pname">Accelerated Scale</div>
+        <div class="pprice">$6,000&ndash;$12,000</div><div class="pper">/mo management &middot; anchors to Scale</div>
+        <div class="pspend">Multi-channel, multi-geo spend</div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="sechead"><td colspan="4">The motion and channels</td></tr>
+    <tr>
+      <td class="rowlab">Thought leadership</td>
+      <td><span class="chk">&check;</span> <span class="qual">Company page + David, core cadence</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">Full distribution: personal, company, YouTube, newsletter, blog</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Expanded volume: more video and clips, higher cadence</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">LinkedIn ads</td>
+      <td><span class="chk">&check;</span> <span class="qual">Retargeting only</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">Retargeting + ABM named accounts</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Retargeting + ABM + cold personas</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">Google paid search</td>
+      <td><span class="crs">&mdash;</span> <span class="qual">Not at this tier</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">Capture + brand defense + conquest</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Full capture + non-brand expansion</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">Meta + programmatic</td>
+      <td><span class="crs">&mdash;</span></td>
+      <td class="rec"><span class="crs">&mdash;</span> <span class="qual">Earned at Scale</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Extend against the enriched pool</span></td>
+    </tr>
+    <tr class="sechead"><td colspan="4">Signals &amp; intelligence</td></tr>
+    <tr>
+      <td class="rowlab">DemandSense signals</td>
+      <td><span class="chk">&check;</span> <span class="qual">Full five-source stack</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">Five-source + shared across channels</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Five-source, board-grade</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">Web ID</td>
+      <td><span class="crs">&mdash;</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">Companies + people on the site</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">Full Web ID</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">HubSpot influenced revenue</td>
+      <td><span class="prt">Partial</span> <span class="qual">Engaged accounts + Impact Report</span></td>
+      <td class="rec"><span class="chk">&check;</span> <span class="qual">HubSpot synced: influenced pipeline + hidden pipeline</span></td>
+      <td><span class="chk">&check;</span> <span class="qual">HubSpot synced + CAPI back to LinkedIn</span></td>
+    </tr>
+    <tr class="sechead"><td colspan="4">Team &amp; reporting</td></tr>
+    <tr>
+      <td class="rowlab">Pod</td>
+      <td><span class="qual">Strategist + execution pod, one channel</span></td>
+      <td class="rec"><span class="qual">Pod across two channels as one motion</span></td>
+      <td><span class="qual">Dedicated senior strategist + full pod, all accounts</span></td>
+    </tr>
+    <tr>
+      <td class="rowlab">Reporting</td>
+      <td><span class="qual">Quarterly Impact Report</span></td>
+      <td class="rec"><span class="qual">Consolidated cross-channel, HubSpot-anchored</span></td>
+      <td><span class="qual">Quarterly EBR, board-grade Impact Report</span></td>
+    </tr>
+    <tr class="sechead"><td colspan="4">Why it fits Craftable</td></tr>
+    <tr>
+      <td class="rowlab">In one line</td>
+      <td><span class="qual">Activate the 11K followers, Insight Tag traffic, and HubSpot lists you already have, at the lowest commitment.</span></td>
+      <td class="rec"><span class="qual">Fills the open Google lane, adds the ABM spine and Web ID, and ties every touch to HubSpot revenue. The complete motion.</span></td>
+      <td><span class="qual">For aggressive board goals: cold expansion, Meta and programmatic reach, and CAPI revenue attach.</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="freebar"><b>The Demand Plan stays free.</b> The competitive white space, targeting, and motion work already delivered was the free Demand Plan, and it is yours to keep regardless of whether we work together. Nothing above bills for what you already have.</div>
+
+<!-- PROOF -->
+<div class="sec">
+  <div class="secnum">03 &mdash; Matched Proof</div>
+  <h2>Where this motion has run before</h2>
+  <p class="lede">Not a logo wall. Three accounts whose situation mirrors Craftable's, and why each one maps.</p>
+</div>
+<div class="grid2">
+  <div class="card tl">
+    <div class="gaphead"><h3>HeyReach</h3><span class="badge b-hi">13x ROAS</span></div>
+    <p style="margin-top:10px;font-size:14.5px;color:var(--sub)">Product-led, organic-heavy, founder on camera. Prior paid brought cheap sign-ups that churned; signal analysis found strong ICP fit hiding in the site traffic, and warm-traffic activation plus founder content turned it into pipeline.</p>
+    <div class="why"><b>Why this one for you:</b> it is Craftable's starting point almost exactly, an organic-heavy company with a credible leader voice and warm traffic waiting to be activated.</div>
+  </div>
+  <div class="card tt">
+    <div class="gaphead"><h3>Vertical-AI SaaS</h3><span class="badge b-hi">21x ROAS</span></div>
+    <p style="margin-top:10px;font-size:14.5px;color:var(--sub)">$389K closed-won and $805K pipeline in 90 days, with the whole program measured on revenue attribution rather than clicks.</p>
+    <div class="why"><b>Why this one for you:</b> it is the HubSpot influenced-revenue story, proving pipeline and closed-won to the board, which is exactly what the DemandSense-to-HubSpot sync delivers here.</div>
+  </div>
+</div>
+<div class="card tb" style="margin-top:14px">
+  <div class="gaphead"><h3>Octopus + Codefresh</h3><span class="badge b-md">10:1, $1.38M pipeline</span></div>
+  <p style="margin-top:10px;font-size:14.5px;color:var(--sub)">$138K in spend to $1.38M in pipeline across two product lines in one account, with a cross-domain tracking rebuild and a Google-led capture motion.</p>
+  <div class="why"><b>Why this one for you:</b> Craftable runs multiple product lines (Bevager and Foodager) and we are adding the Google capture lane and tightening conversion capture with CAPI, the same pattern.</div>
+</div>
+
+<!-- RECOMMENDATION -->
+<div class="sec">
+  <div class="secnum">04 &mdash; The Recommendation</div>
+  <h2>Start with The Full Motion</h2>
+</div>
+<div class="card tl">
+  <p style="margin:0">The foundation Craftable needs, a content engine and warm traffic, largely exists already, so the entry tier would leave the biggest wins on the table. The first things worth adding are the ones that are wide open: the Google capture and brand-defense lane you run none of today, the ABM spine for the nameable mid-market universe, Web ID to name the companies and people on the site, and the HubSpot sync that turns all of it into board-ready pipeline. That is The Full Motion. Accelerated Scale is there the moment the board wants cold expansion and multi-channel reach, earned by the results of the tier below it. The exact fees, including the thought-leadership production tier, are set on the call.</p>
+</div>
+
+<div class="btnrow dark-panel" style="background:#071A38;border-radius:16px;padding:26px 24px;margin-top:22px;text-align:center">
+  <div style="font-family:var(--display);font-size:clamp(20px,3vw,28px);color:#F4F1EA;margin-bottom:6px">Book the scoping call</div>
+  <p style="color:rgba(216,212,200,.85);max-width:560px;margin:0 auto 16px;font-size:15px">Fifteen minutes to confirm the fees, the thought-leadership cadence, and the week-one tracking checklist. The room is yours to keep either way.</p>
+  <a class="btn primary" href="https://landbot.online/v3/H-2201411-ZNNL8EM9RF7C2XAC/index.html" target="_blank" rel="noopener">Book a 15-minute call &rarr;</a>
+</div>
+
+</section>
+</main>
+<footer class="footer dark-panel"><div class="wrap">
+Built from public sources with no account access. Estimates are indicative, not forecasts, and unknowns are flagged rather than filled in. DemandSense and Web ID are Impactable's own software. Fees are confirmed on the scoping call. The Demand Plan work is free and yours to keep.
+</div></footer>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themebtn');
+  function applyTheme(t){root.setAttribute('data-theme',t);btn.textContent=(t==='dark')?'Light mode':'Dark mode';}
+  var saved=null;try{saved=localStorage.getItem('imp_theme');}catch(e){}
+  applyTheme(saved==='light'?'light':'dark');
+  btn.addEventListener('click',function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';applyTheme(n);try{localStorage.setItem('imp_theme',n);}catch(e){}});
+  var tabs=document.querySelectorAll('.navtab');
+  function showView(id){
+    var el=document.getElementById(id);
+    if(!el){return;}
+    document.querySelectorAll('section.view').forEach(function(s){s.classList.remove('active');});
+    el.classList.add('active');
+    tabs.forEach(function(t){t.classList.toggle('active', t.getAttribute('data-view')===id);});
+    window.scrollTo(0,0);
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){location.hash=t.getAttribute('data-view');});});
+  document.addEventListener('click',function(e){var g=e.target.closest('[data-goto]');if(!g)return;e.preventDefault();location.hash=g.getAttribute('data-goto');});
+  function fromHash(){var h=(location.hash||'#overview').replace('#','');showView(h);}
+  window.addEventListener('hashchange',fromHash);
+  fromHash();
+})();
+</script>
+</body>
+</html>
